@@ -1,11 +1,11 @@
 import React, {useState,useEffect,useRef}  from 'react'
 import {Box, Button, Fab, Grid, Stack, TextField, Typography} from '@mui/material'
-// import Header from './components/Header'
+import Header from './components/Header'
 import RedditIcon from '@mui/icons-material/Reddit';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import Footer from './components/Footer';
-// import Project from './components/Project';
+import Footer from './components/Footer';
+import Project from './components/Project';
 // import { send } from 'emailjs-com';
 import Slide from '@mui/material/Slide';
 
