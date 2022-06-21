@@ -3,7 +3,7 @@ import {  AppBar,Typography, Toolbar, Stack,Button, Grid } from '@mui/material'
 
 const Footer = () => {
   return (
-    <AppBar position="sticky" sx={{backgroundColor:'transparent',boxShadow:0,padding:0}}>
+    <AppBar position="sticky" sx={{backgroundColor:'primary.dark',boxShadow:0,padding:0}}>
        <Toolbar sx={{display:'flex'}}>
 
          <Grid container>

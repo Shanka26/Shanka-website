@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Project from './components/Project';
 // import { send } from 'emailjs-com';
 import Slide from '@mui/material/Slide';
+import pomonotoScreen from './res/pomonotoScreen2.webp'
+import dcoreScreen from './res/dcoreScreen.png'
 
 
 function App() {
@@ -125,18 +127,18 @@ function App() {
   },[view])
 
   return (
-    <Box >
-      {/* <Header/> */}
-      <Box height='100vh' >
-        <Grid height={1} container direction='column' sx={{mx:0,px:8}}>
+    <Box ref={aboutRef}>
+      <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
+      <Box height='100vh' pt={4}  justifyContent='center' alignItems='center'>
+        <Grid  height={1} container direction='column' sx={{mx:0,px:8}}>
 
           <Grid container item xs={3} justifyContent='space-between'>
             
           <Grid item xs={5} >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography variant='h5' align='left'>{quote1}</Typography>
-                <Typography variant='h5' align='left'>{author1}</Typography>
+                <Typography variant='h6' align='left'>{quote1}</Typography>
+                <Typography variant='h6' align='left'>{author1}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -144,8 +146,8 @@ function App() {
             <Grid item xs={5} >
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography variant='h5' align='right'>{quote2}</Typography>
-                <Typography variant='h5' align='right'>{author2}</Typography>
+                <Typography variant='h6' align='right'>{quote2}</Typography>
+                <Typography variant='h6' align='right'>{author2}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -187,8 +189,8 @@ function App() {
             <Grid item xs={5}>
             <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography variant='h5' align='left'>{quote3}</Typography>
-                <Typography variant='h5' align='left'>{author3}</Typography>
+                <Typography variant='h6' align='left'>{quote3}</Typography>
+                <Typography variant='h6' align='left'>{author3}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -196,8 +198,8 @@ function App() {
             <Grid item xs={5}>
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-              <Typography variant='h5' align='right'>{quote4}</Typography>
-              <Typography variant='h5' align='right'>{author4}</Typography>
+              <Typography variant='h6' align='right'>{quote4}</Typography>
+              <Typography variant='h6' align='right'>{author4}</Typography>
               </Box>
             </Slide>
 
@@ -226,26 +228,20 @@ function App() {
 
 
 
-
-
-
-
-
-
       
-      <Box ref = {projectsRef} sx={{p:2,backgroundColor:'primary.main', height:1 }}>
+      <Box ref = {projectsRef}
+      sx={{p:4, pt:14,pb:12,backgroundColor:'primary.light', height:1 ,}}>
         <Typography variant="h2" align='center' sx={{marginBottom:8}}>Projects</Typography>
         <Box >
           <Grid container justifyContent='center' spacing={0}>
-            {/* <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
-              <Project title='Pomonoto' tags={['React','Django']} link="https://pomonoto.netlify.app/"/>
+            <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
+              <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django']} link="https://pomonoto.netlify.app/"/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title='Pomonoto' tags={['React']} link="https://pomonoto.netlify.app/"/>
+              <Project title="D'Core Paperie" image={dcoreScreen} tags={['React']} link="https://dcore.netlify.app/"/>
             </Grid>
-            <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title='Pomonoto' tags={['React','Django']} link="https://pomonoto.netlify.app/"/>
-            </Grid> */}
+            
+
             
           </Grid>
          
@@ -259,12 +255,13 @@ function App() {
 
 
 
-      <Box  ref = {contactRef} justifyContent='center' alignItems='center' sx={{backgroundColor:'primary.dark', height:'100vh'}}>
+      <Box  ref = {contactRef} 
+      pt={12} sx={{backgroundColor:'primary.light', height:'100vh'}}>
         
-          <Box pt={8} mb={8} alignItems='center'>
-            <Typography mb={4} variant='h2'  align='center'>Get In Touch</Typography>
-            <Typography variant='h4' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
-            <Typography variant='h4' align='center'>Feel free to send me a message or follow me on social media. </Typography>
+          <Box mb={4} alignItems='center'>
+            <Typography mb={2} variant='h2'  align='center'>Get In Touch</Typography>
+            <Typography variant='h5' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
+            <Typography variant='h5' align='center'>Feel free to send me a message or follow me on social media. </Typography>
 
             
           </Box>
@@ -275,23 +272,26 @@ function App() {
             <Fab><GitHubIcon/></Fab>
             </Stack>
 
-            <Box mx={12} mt={8} >
+            <Box mx={12} mt={4} >
               <Grid container rowSpacing={2} alignItems='center' justifyContent='center' >
               <Grid item xs={12}>
                 <Typography variant='h6'>Send me an Email</Typography>
               </Grid>
               
-              {/* <Grid item xs={6} >
-                <TextField fullWidth label="Your Name" value={emailName} onChange={(e)=>{setEmailName(e.target.value)}}/>
+              <Grid container justifyContent='flex-start' pr={1} item xs={6} >
+                
+                  <TextField fullWidth label="Your Name" value={emailName} onChange={(e)=>{setEmailName(e.target.value)}}/>
+               
+                
               </Grid>
 
-              <Grid item xs={6} >
+              <Grid container justifyContent='flex-end' item xs={6} pl={1}>
                 <TextField fullWidth label="Your Email" value={emailAddress} onChange={(e)=>{setEmailAddress(e.target.value)}}/>
               </Grid>
           
               <Grid item  xs={12}>
-                <TextField fullWidth multiline rows={12} label="Your Message" value={emailMessage} onChange={(e)=>{setEmailMessage(e.target.value)}}/>
-              </Grid> */}
+                <TextField fullWidth multiline rows={8} label="Your Message" value={emailMessage} onChange={(e)=>{setEmailMessage(e.target.value)}}/>
+              </Grid>
 
               <Grid container item xs={12} justifyContent="space-between">
                 <Typography variant='h6'>You should recieve a confirmation email</Typography>
@@ -304,7 +304,7 @@ function App() {
          
 
       </Box>
-        {/* <Footer/> */}
+        <Footer/>
     </Box>
   );
 }

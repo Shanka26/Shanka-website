@@ -1,8 +1,8 @@
-import { Chip, Grid, Paper, Typography, Stack, Button } from '@mui/material'
+import { Chip, Grid, Paper, Typography, Stack, Button, Box } from '@mui/material'
 // import Link from 'react-router-dom'
 import React,{useState} from 'react'
 import pomonotoScreen from '../res/pomonotoScreen2.webp'
-
+import Image from 'mui-image'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 // import Image from 'material-ui-image'
 
@@ -14,10 +14,9 @@ const style = {
     
     width:'360px',
     height:'450px',
-    backgroundImage: `url(${pomonotoScreen})`,
     margin:2,
     boxShadow:0,
-    cornerRadius:16,
+    borderRadius:8,
     '&:hover':{
         backgroundColor:'primary.light',
         // backgroundColor: rgba(0,0,0,0.25),
@@ -26,22 +25,31 @@ const style = {
     }
 };
 
-const Project = ({title,tags,link}) => {
+const Project = ({title,image,tags,link}) => {
 
-    let [visible,setVisible] = useState("flex")
+    let [visible,setVisible] = useState("none")
+    let [imgVisible,setImgVisible] = useState("flex")
     
 
   return (
-    <Paper sx={style} onMouseEnter={()=>setVisible("flex")} onMouseLeave={()=>setVisible("none")}>
+    <Paper sx={style} onMouseEnter={()=>{setVisible("flex");setImgVisible("none")}}
+     onMouseLeave={()=>{setVisible("none");setImgVisible("flex")}}>
         
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column' height={1}>
         {/* <Image src={pomonotoScreen}/> */}
-            <Grid container item xs={2.5} alignItems='center' justifyContent='center'>
+            <Grid container item xs={3} alignItems='center' justifyContent='center'>
                 <Typography variant='h3' align ='center'>{title}</Typography>
             </Grid>
-            <Grid container item alignItems='center' xs={5.5} sx={{ display:visible,px:8}}>
-                <Typography variant='h5' align ='center'>This is a website about websites used to make wesites that can create websites for website purposes</Typography>
+            <Grid container item  alignItems='flex-start' xs={9}  display={imgVisible}>
+                <Box >
+                    <Image src={image} shift="top" duration={700} 
+                    distance={400} shiftDuration={400} showLoading fit="contain"/>
+                </Box>
+                
+            </Grid>
+            <Grid container item alignItems='center' xs={5} sx={{ display:visible,px:8}}>
+                <Typography variant='h6' align ='center'>This is a website about websites used to make wesites that can create websites for website purposes</Typography>
             </Grid>
             
             <Grid container direction='column' item  xs={4} alignItems='center' justifyContent='space-evenly' sx={{display:visible}}> 
