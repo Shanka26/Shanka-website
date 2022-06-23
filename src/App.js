@@ -10,6 +10,9 @@ import Project from './components/Project';
 import Slide from '@mui/material/Slide';
 import pomonotoScreen from './res/pomonotoScreen2.webp'
 import dcoreScreen from './res/dcoreScreen.png'
+// import styled from "styled-components";
+import { styled } from '@mui/system';
+
 
 
 function App() {
@@ -38,18 +41,57 @@ function App() {
 
 
 
-
+  const scrollBar = {
+    '&::-webkit-scrollbar': {
+      width: '0.4em'
+    },
+    '&::-webkit-scrollbar-track': {
+      '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: 'rgba(40,0,0,1)',
+      borderRadius: 2
+      
+    },
+    '&::-webkit-scrollbar-thumb:hover': {
+        backgroundColor: 'rgba(0,0,0,.4)',
+        
+      }
+    }
 
 
   let viewStyle = {
     color:'primary.main',
     fontSize:{xs:32,md:40},
     '&:hover':{
-      color:'primary.dark', 
+      color:'primary.mid', 
       fontSize:{xs:40,md:48},
     }
     
   }
+
+  let fabStyle ={
+    color:'secondary.light',
+    backgroundColor:'primary.main',
+    '&:hover':{
+      // color:'primary.light',
+      backgroundColor:'primary.dark'
+    }
+  }
+ 
+  let textFieldStyle={
+    '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'secondary.light',
+    },
+    '&:hover fieldset': {
+      borderColor: 'primary.mid',
+    },
+  },
+  input:{color: '#fff'}
+}
+
+
   let sendEmail=async()=>{
     console.log('shoot')
     // if(/\S+@\S+\.\S+/.test(emailAddress)&&emailAddress!==""&&emailMessage!==""){
@@ -127,7 +169,7 @@ function App() {
   },[view])
 
   return (
-    <Box ref={aboutRef}>
+    <Box ref={aboutRef} backgroundColor='secondary.dark' sx={{...scrollBar}}>
       <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
       <Box height='100vh' pt={4}  justifyContent='center' alignItems='center'>
         <Grid  height={1} container direction='column' sx={{mx:0,px:8}}>
@@ -137,8 +179,8 @@ function App() {
           <Grid item xs={5} >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography variant='h6' align='left'>{quote1}</Typography>
-                <Typography variant='h6' align='left'>{author1}</Typography>
+                <Typography color='secondary.light' variant='h6' align='left'>{quote1}</Typography>
+                <Typography color='primary.mid' variant='h6' align='left'>{author1}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -146,21 +188,21 @@ function App() {
             <Grid item xs={5} >
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography variant='h6' align='right'>{quote2}</Typography>
-                <Typography variant='h6' align='right'>{author2}</Typography>
+                <Typography color='secondary.light' variant='h6' align='right'>{quote2}</Typography>
+                <Typography color='primary.mid' variant='h6' align='right'>{author2}</Typography>
               </Box>
             </Slide>
             </Grid>
           </Grid>
 
           <Grid container item  direction='column' xs={2} >
-            <Typography variant='h3' align='center'>
+            <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
-              <Typography display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
+              <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
-            <Typography variant='h3' align='center'>
+            <Typography color='secondary.light' variant='h3' align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit'onMouseEnter={()=>{setView(2)}} onMouseLeave={()=>{setView(0)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
@@ -172,8 +214,8 @@ function App() {
           
           <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
             <Box>
-              <Typography variant='h5' align='center'>{about}</Typography>
-              <Typography variant='h5' align='center'>{about2}</Typography>
+              <Typography color='secondary.light' variant='h5' align='center'>{about}</Typography>
+              <Typography color='secondary.light'  variant='h5' align='center'>{about2}</Typography>
             </Box>
           </Slide>
               
@@ -189,8 +231,8 @@ function App() {
             <Grid item xs={5}>
             <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography variant='h6' align='left'>{quote3}</Typography>
-                <Typography variant='h6' align='left'>{author3}</Typography>
+                <Typography color='secondary.light' variant='h6' align='left'>{quote3}</Typography>
+                <Typography color='primary.mid' variant='h6' align='left'>{author3}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -198,8 +240,8 @@ function App() {
             <Grid item xs={5}>
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-              <Typography variant='h6' align='right'>{quote4}</Typography>
-              <Typography variant='h6' align='right'>{author4}</Typography>
+              <Typography color='secondary.light' variant='h6' align='right'>{quote4}</Typography>
+              <Typography color='primary.mid' variant='h6' align='right'>{author4}</Typography>
               </Box>
             </Slide>
 
@@ -230,8 +272,8 @@ function App() {
 
       
       <Box ref = {projectsRef}
-      sx={{p:4, pt:14,pb:12,backgroundColor:'primary.light', height:1 ,}}>
-        <Typography variant="h2" align='center' sx={{marginBottom:8}}>Projects</Typography>
+      sx={{p:4, pt:8,pb:12, height:1 ,}}>
+        <Typography variant="h2" align='center' color='secondary.light' sx={{marginBottom:8}}>Projects</Typography>
         <Box >
           <Grid container justifyContent='center' spacing={0}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
@@ -256,46 +298,65 @@ function App() {
 
 
       <Box  ref = {contactRef} 
-      pt={12} sx={{backgroundColor:'primary.light', height:'100vh'}}>
+      pt={8} sx={{ height:'100vh'}}>
         
-          <Box mb={4} alignItems='center'>
-            <Typography mb={2} variant='h2'  align='center'>Get In Touch</Typography>
-            <Typography variant='h5' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
-            <Typography variant='h5' align='center'>Feel free to send me a message or follow me on social media. </Typography>
+          <Box mb={2} alignItems='center'>
+            <Typography color='secondary.light' mb={2} variant='h2'  align='center'>Get In Touch</Typography>
+            <Typography color='secondary.light' variant='h5' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
+            <Typography color='secondary.light' variant='h5' align='center'>Feel free to send me a message or follow me on social media. </Typography>
 
             
           </Box>
 
-          <Stack direction='row' gap={4} justifyContent='center'>
-            <Fab><TwitterIcon/></Fab>
-            <Fab><RedditIcon/></Fab>
-            <Fab><GitHubIcon/></Fab>
+          <Stack direction='row' gap={2} justifyContent='center'>
+            <Fab sx={fabStyle} size='medium'><TwitterIcon/></Fab>
+            <Fab sx={fabStyle} size='medium'><RedditIcon/></Fab>
+            <Fab sx={fabStyle} size='medium'><GitHubIcon/></Fab>
             </Stack>
 
-            <Box mx={12} mt={4} >
+            <Box mx={12} mt={2} >
               <Grid container rowSpacing={2} alignItems='center' justifyContent='center' >
               <Grid item xs={12}>
-                <Typography variant='h6'>Send me an Email</Typography>
+                <Typography color='secondary.light' variant='h6'>Send me an Email</Typography>
               </Grid>
               
               <Grid container justifyContent='flex-start' pr={1} item xs={6} >
                 
-                  <TextField fullWidth label="Your Name" value={emailName} onChange={(e)=>{setEmailName(e.target.value)}}/>
+                  <TextField
+                  sx={textFieldStyle}
+                  InputLabelProps={{
+                    style: { color: '#fff' },
+                  }}
+
+                   fullWidth label="Your Name" value={emailName} onChange={(e)=>{setEmailName(e.target.value)}}/>
                
                 
               </Grid>
 
+
               <Grid container justifyContent='flex-end' item xs={6} pl={1}>
-                <TextField fullWidth label="Your Email" value={emailAddress} onChange={(e)=>{setEmailAddress(e.target.value)}}/>
+                <TextField 
+                sx={textFieldStyle}
+                InputLabelProps={{
+                  style: { color: '#fff' },
+                }}
+                fullWidth  label="Your Email" value={emailAddress} onChange={(e)=>{setEmailAddress(e.target.value)}}/>
               </Grid>
           
               <Grid item  xs={12}>
-                <TextField fullWidth multiline rows={8} label="Your Message" value={emailMessage} onChange={(e)=>{setEmailMessage(e.target.value)}}/>
+                <TextField 
+                sx={textFieldStyle}
+                InputLabelProps={{
+                  style: { color: '#fff' },
+                }}
+                inputProps={{ style: {color: 'white'}}}
+                
+                fullWidth multiline rows={6} label="Your Message" value={emailMessage} onChange={(e)=>{setEmailMessage(e.target.value)}}/>
               </Grid>
 
               <Grid container item xs={12} justifyContent="space-between">
-                <Typography variant='h6'>You should recieve a confirmation email</Typography>
-                <Button onClick={(e)=>{sendEmail()}} >Send</Button>
+                <Typography color='secondary.light' variant='h6'>You should recieve a confirmation email</Typography>
+                <Button variant='contained' sx={{color: 'secondary.light'}} onClick={(e)=>{sendEmail()}} >Send</Button>
               </Grid>
               
             </Grid>

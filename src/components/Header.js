@@ -18,20 +18,20 @@ const Header = ({about,projects,contact}) => {
 
   return (
     
-   <AppBar position="sticky" sx={{backgroundColor:'primary.dark',boxShadow:4,padding:0}}>
+   <AppBar position="sticky" sx={{backgroundColor:'rgba(0,0,0,0.4)',boxShadow:4,padding:0}}>
        <Toolbar sx={{display:'flex'}}>
 
          <Grid container>
 
            <Grid item xs={3}>
-              <Typography color='primary.main' variant="h5" fontSize={{xs:48,md:60}}>Logo</Typography>
+              <Typography color='primary.mid' variant="h5" fontSize={48}>Logo</Typography>
            </Grid>
 
            <Grid item container xs={9} justifyContent="flex-end">
            <Stack direction='row' gap={2}>
-              <Button width={1} onClick={()=>{scrollTo(about)}}>About me</Button>
-              <Button onClick={()=>{scrollTo(projects)}}>My projects</Button>
-              <Button onClick={()=>{scrollTo(contact)}}>Get in touch</Button>
+              <Button sx={{color:'primary.mid'}} width={1} onClick={()=>{scrollTo(about)}}>About me</Button>
+              <Button sx={{color:'primary.mid'}} onClick={()=>{scrollTo(projects)}}>My projects</Button>
+              <Button sx={{color:'primary.mid'}} onClick={()=>{scrollTo(contact)}}>Get in touch</Button>
             </Stack>
            </Grid>
          </Grid>
