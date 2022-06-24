@@ -31,6 +31,7 @@ const theme = createTheme({
     borderColor: "yellow !important"
   },
   typography:{
+    
     h3:{
       color:'primary.main',
       fontSize:'1.9rem'

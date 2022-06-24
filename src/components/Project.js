@@ -16,16 +16,17 @@ const style = {
     height:'450px',
     margin:2,
     boxShadow:0,
-    borderRadius:8,
+    borderRadius:4,
+    backgroundColor:'secondary.main',
     '&:hover':{
-        backgroundColor:'primary.light',
+        backgroundColor:'primary.mid',
         // backgroundColor: rgba(0,0,0,0.25),
         backgroundImage: `url()`, 
         boxShadow:20,
     }
 };
 
-const Project = ({title,image,tags,link}) => {
+const Project = ({title,description,image,tags,link}) => {
 
     let [visible,setVisible] = useState("none")
     let [imgVisible,setImgVisible] = useState("flex")
@@ -39,7 +40,7 @@ const Project = ({title,image,tags,link}) => {
         <Grid container direction='column' height={1}>
         {/* <Image src={pomonotoScreen}/> */}
             <Grid container item xs={3} alignItems='center' justifyContent='center'>
-                <Typography variant='h3' align ='center'>{title}</Typography>
+                <Typography color={visible=="none"?'secondary.dark':'secondary.light'} fontSize={'2.3em'} variant='h3' align ='center'>{title}</Typography>
             </Grid>
             <Grid container item  alignItems='flex-start' xs={9}  display={imgVisible}>
                 <Box >
@@ -48,20 +49,24 @@ const Project = ({title,image,tags,link}) => {
                 </Box>
                 
             </Grid>
-            <Grid container item alignItems='center' xs={5} sx={{ display:visible,px:8}}>
-                <Typography variant='h6' align ='center'>This is a website about websites used to make wesites that can create websites for website purposes</Typography>
+            <Grid container item alignItems='center' xs={4} sx={{ display:visible,px:4}}>
+                <Typography variant='body1' color='secondary.light' align ='center'>{description}</Typography>
             </Grid>
             
-            <Grid container direction='column' item  xs={4} alignItems='center' justifyContent='space-evenly' sx={{display:visible}}> 
-            <Stack direction='row' gap={2}>
+            <Grid container direction='column' item  xs={4} alignItems='center' justifyContent='space-around' sx={{display:visible}}> 
+            <Grid container spacing ={1} justifyContent='center' px={8}>
 
                 {tags.map((e,i,)=>(
-                    <Chip label = {e}/>
+                    <Grid item>
+                        <Chip sx={{backgroundColor:'rgba(0,0,0,.2)',color:'secondary.light'}} label = {e}/>
+                    </Grid>
+                    
+                    
                 ))}
 
-            </Stack> 
+            </Grid> 
                 
-                <Button variant='contained' target="_blank" href={link}>Visit Site<ArrowForwardIosIcon  sx={{pl:1, fontSize:16}} /></Button>
+                <Button variant='contained' sx={{backgroundColor:'primary.dark'}} target="_blank" href={link}>Visit Site<ArrowForwardIosIcon  sx={{pl:1, fontSize:16, }} /></Button>
             </Grid>
             
         </Grid>

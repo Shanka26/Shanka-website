@@ -9,7 +9,7 @@ import Project from './components/Project';
 // import { send } from 'emailjs-com';
 import Slide from '@mui/material/Slide';
 import pomonotoScreen from './res/pomonotoScreen2.webp'
-import dcoreScreen from './res/dcoreScreen.png'
+import dcoreScreen from './res/dcoreScreen4.png'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 
@@ -89,6 +89,9 @@ function App() {
     },
   },
   input:{color: '#fff'}
+}
+let quoteStyle= {
+  fontSize:{xs:12,sm:16,md:20,lg:28}
 }
 
 
@@ -170,26 +173,29 @@ function App() {
 
   return (
     <Box ref={aboutRef} backgroundColor='secondary.dark' sx={{...scrollBar}}>
-      <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
-      <Box height='100vh' pt={4}  justifyContent='center' alignItems='center'>
-        <Grid  height={1} container direction='column' sx={{mx:0,px:8}}>
+      <Box>
+        <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
+      </Box>
+      
+      <Box height={'100vh'} pt={4}  justifyContent='center' alignItems='center'>
+        <Grid  height={1} container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12}}}>
 
-          <Grid container item xs={3} justifyContent='space-between'>
+          <Grid container item xs={4} justifyContent='space-between'>
             
-          <Grid item xs={5} >
+          <Grid item xs={6} >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography color='secondary.light' variant='h6' align='left'>{quote1}</Typography>
-                <Typography color='primary.mid' variant='h6' align='left'>{author1}</Typography>
+                <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote1}</Typography>
+                <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author1}</Typography>
               </Box>
             </Slide>
             </Grid>
 
-            <Grid item xs={5} >
+            <Grid item xs={6} >
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography color='secondary.light' variant='h6' align='right'>{quote2}</Typography>
-                <Typography color='primary.mid' variant='h6' align='right'>{author2}</Typography>
+                <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
+                <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -210,29 +216,26 @@ function App() {
 
           </Grid>
 
-          <Grid justifyContet="center"item xs={3} alignItems="center" ref={aboutRef}>
+          <Grid justifyContet="center" item xs={2} alignItems="center" ref={aboutRef}>
           
           <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
-            <Box>
-              <Typography color='secondary.light' variant='h5' align='center'>{about}</Typography>
-              <Typography color='secondary.light'  variant='h5' align='center'>{about2}</Typography>
+            <Box alignItems="center">
+              <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography>
+              <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle}>{about2}</Typography>
             </Box>
           </Slide>
               
             
           </Grid>
 
-          <Grid container item xs={4}  justifyContent='space-between'>
+          <Grid container item xs={4}  justifyContent='space-between' alignItems='center'>
             
-            {/* <Grid item  xs={12}>
-              <Typography align='center'>{about}</Typography>
-              <Typography align='center'>{about2}</Typography>
-            </Grid> */}
+            
             <Grid item xs={5}>
             <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-                <Typography color='secondary.light' variant='h6' align='left'>{quote3}</Typography>
-                <Typography color='primary.mid' variant='h6' align='left'>{author3}</Typography>
+                <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote3}</Typography>
+                <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author3}</Typography>
               </Box>
             </Slide>
             </Grid>
@@ -240,8 +243,8 @@ function App() {
             <Grid item xs={5}>
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
-              <Typography color='secondary.light' variant='h6' align='right'>{quote4}</Typography>
-              <Typography color='primary.mid' variant='h6' align='right'>{author4}</Typography>
+              <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote4}</Typography>
+              <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author4}</Typography>
               </Box>
             </Slide>
 
@@ -277,10 +280,12 @@ function App() {
         <Box >
           <Grid container justifyContent='center' spacing={0}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
-              <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django']} link="https://pomonoto.netlify.app/"/>
+              <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
+              description="Pomodoro timer with a helpful twist, During work phases, users can jot down disappearing notes and be remided of them later when on break."/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title="D'Core Paperie" image={dcoreScreen} tags={['React']} link="https://dcore.netlify.app/"/>
+              <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://dcore.netlify.app/"
+              description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
             
 
@@ -314,13 +319,13 @@ function App() {
             <Fab sx={fabStyle} size='medium'><GitHubIcon/></Fab>
             </Stack>
 
-            <Box mx={12} mt={2} >
+            <Box mx={{xs:4,sm:8,md:16,lg:24}} my={2} >
               <Grid container rowSpacing={2} alignItems='center' justifyContent='center' >
               <Grid item xs={12}>
                 <Typography color='secondary.light' variant='h6'>Send me an Email</Typography>
               </Grid>
               
-              <Grid container justifyContent='flex-start' pr={1} item xs={6} >
+              <Grid container justifyContent='flex-start' pr={{xs:0,md:1}} item xs={12} md={6} >
                 
                   <TextField
                   sx={textFieldStyle}
@@ -334,7 +339,7 @@ function App() {
               </Grid>
 
 
-              <Grid container justifyContent='flex-end' item xs={6} pl={1}>
+              <Grid container justifyContent='flex-end' item xs={12} md={6} pl={{xs:0,md:1}}>
                 <TextField 
                 sx={textFieldStyle}
                 InputLabelProps={{
