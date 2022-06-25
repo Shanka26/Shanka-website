@@ -136,7 +136,7 @@ let quoteStyle= {
       setAuthor4("~ Henry Winkler")
     }
     else if(view==2){
-      setAbout("I design and develop fully responsive web applications.")
+      setAbout("I design and develop responsive web applications.")
       setAbout2("I love learning new technologies and improving my craft.")
 
       setQuote1('“A true master is an eternal student.”')
@@ -172,15 +172,15 @@ let quoteStyle= {
   },[view])
 
   return (
-    <Box ref={aboutRef} backgroundColor='secondary.dark' sx={{...scrollBar}}>
-      <Box>
-        <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
-      </Box>
+    <Box ref={aboutRef} backgroundColor='secondary.dark' width='100vw' sx={{...scrollBar,display:'flex',flexDirection:'column',}}>
       
-      <Box height={'100vh'} pt={4}  justifyContent='center' alignItems='center'>
+        <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
+      
+      
+      <Box height={'90vh'}  pt={{xs:2,sm:4,md:8}}  justifyContent='center' alignItems='center'>
         <Grid  height={1} container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12}}}>
 
-          <Grid container item xs={4} justifyContent='space-between'>
+          <Grid container item xs={3} md={4} justifyContent='space-between'>
             
           <Grid item xs={6} >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
@@ -228,7 +228,7 @@ let quoteStyle= {
             
           </Grid>
 
-          <Grid container item xs={4}  justifyContent='space-between' alignItems='center'>
+          <Grid container item xs={3} md={4}  justifyContent='space-between' alignItems='center'>
             
             
             <Grid item xs={5}>
@@ -275,7 +275,7 @@ let quoteStyle= {
 
       
       <Box ref = {projectsRef}
-      sx={{p:4, pt:8,pb:12, height:1 ,}}>
+      sx={{p:4, pt:{xs:2,sm:4,md:8,lg:12},pb:12, height:1 ,}}>
         <Typography variant="h2" align='center' color='secondary.light' sx={{marginBottom:8}}>Projects</Typography>
         <Box >
           <Grid container justifyContent='center' spacing={0}>
@@ -303,7 +303,7 @@ let quoteStyle= {
 
 
       <Box  ref = {contactRef} 
-      pt={8} sx={{ height:'100vh'}}>
+      pt={{xs:2,sm:4,md:8,lg:12}} pb={4} sx={{ height:1}}>
         
           <Box mb={2} alignItems='center'>
             <Typography color='secondary.light' mb={2} variant='h2'  align='center'>Get In Touch</Typography>
@@ -370,7 +370,10 @@ let quoteStyle= {
          
 
       </Box>
+      <Box>
         <Footer/>
+      </Box>
+        
     </Box>
   );
 }
