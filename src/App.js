@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 import Project from './components/Project';
 // import { send } from 'emailjs-com';
 import Slide from '@mui/material/Slide';
-import pomonotoScreen from './res/pomonotoScreen2.webp'
-import dcoreScreen from './res/dcoreScreen4.png'
+import pomonotoScreen from './res/pomonotoMock.webp'
+import dcoreScreen from './res/dcoreMock.webp'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 

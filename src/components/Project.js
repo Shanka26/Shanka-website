@@ -44,8 +44,8 @@ const Project = ({title,description,image,tags,link}) => {
             </Grid>
             <Grid container item  alignItems='flex-start' xs={9}  display={imgVisible}>
                 <Box >
-                    <Image src={image} shift="top" duration={700} 
-                    distance={400} shiftDuration={400} showLoading fit="contain"/>
+                    <Image src={image} shift="top" duration={700}  width ={380} height={276}
+                    distance={400} shiftDuration={400} showLoading fit="fill"/>
                 </Box>
                 
             </Grid>
