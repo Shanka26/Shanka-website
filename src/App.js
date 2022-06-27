@@ -184,7 +184,7 @@ let quoteStyle= {
       <Box height={'100vh'} justifyContent='center' alignItems='center'>
         <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},pb:{xs:12}}}>
 
-          <Grid container item xs={5} justifyContent='space-evenly' flexDirection='column'>
+          <Grid container item xs={6} justifyContent='space-evenly' flexDirection='column'>
             
           <Box >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
@@ -205,7 +205,7 @@ let quoteStyle= {
             </Box>
           </Grid>
 
-          <Grid container item alignItems='center' sx={{pt:0}} direction='column' xs={7} >
+          <Grid container item alignItems='center' sx={{pt:0}} direction='column' xs={6} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
