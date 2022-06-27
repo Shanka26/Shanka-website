@@ -205,7 +205,7 @@ let quoteStyle= {
             </Box>
           </Grid>
 
-          <Grid container item alignItems='center' sx={{pt:8}} direction='column' xs={7} >
+          <Grid container item alignItems='center' sx={{pt:0}} direction='column' xs={7} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
