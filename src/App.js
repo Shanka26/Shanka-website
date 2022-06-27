@@ -182,11 +182,11 @@ let quoteStyle= {
       
       
       <Box height={'100vh'} justifyContent='center' alignItems='center'>
-        <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:1,sm:4,md:8,lg:12},pb:{xs:12}}}>
+        <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},pb:{xs:12}}}>
 
           <Grid container item xs={5} justifyContent='space-evenly' flexDirection='column'>
             
-          <Box   backgroundColor='primary.dark'>
+          <Box >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
                 <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote1}</Typography>
@@ -205,7 +205,7 @@ let quoteStyle= {
             </Box>
           </Grid>
 
-          <Grid container item alignItems='center' sx={{pt:4}} direction='column' xs={7} >
+          <Grid container item alignItems='center' sx={{pt:8}} direction='column' xs={7} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
@@ -218,11 +218,11 @@ let quoteStyle= {
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
-            <Grid container item justifyContent="center" alignItems='flex-start'  xs={3}  ref={aboutRef}>
+            <Grid container item justifyContent="center" alignItems='flex-start'  xs={3} sx={{pt:2}} ref={aboutRef}>
               <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
                 <Box alignItems="center" >
                   {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography> */}
-                  <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle}>{about2}</Typography>
+                  <Typography color='secondary.light'  variant='h5' align='center' >{about2}</Typography>
                 </Box>
               </Slide>
             </Grid>
@@ -308,7 +308,7 @@ let quoteStyle= {
       <Box  ref = {contactRef} 
       pt={{xs:2,sm:4,md:8,lg:12}} pb={4} sx={{ height:1}}>
         
-          <Box mb={2} alignItems='center' sx={{px:12}}>
+          <Box mb={2} alignItems='center' sx={{px:4}}>
             <Typography color='primary.mid' mb={2} variant='h2'  align='center'>Get In Touch</Typography>
             <Typography color='secondary.light' variant='h4' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
             <Typography color='secondary.light' variant='h4' align='center'>Feel free to send me a message or follow me on social media. </Typography>
