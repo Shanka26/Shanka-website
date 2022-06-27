@@ -22,7 +22,7 @@ function App() {
   let [myView , setMyView] = useState(false)
   let [jobView , setJobView] = useState(false)
   let [about , setAbout] = useState("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
-  let [about_2 , setAbout_2] = useState("My aim in life is to grow everyday and enjoy myself while doing so.")
+  let [about_2 , setAbout_2] = useState("My aim in life is to grow everyday and enjoy myself in the process.")
   let [about2 , setAbout2] = useState("I design and develop responsive web applications")
   let [about2_2 , setAbout2_2] = useState("I love learning about new technologies and improving my craft")
   let infoRef= useRef()
@@ -226,14 +226,14 @@ let quoteStyle= {
                   <Slide direction={"up"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
                       {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about2}</Typography> */}
-                      <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle} >{about2_2}</Typography>
+                      <Typography color='secondary.light'  variant='h6' align='center' sx={quoteStyle} >{about2_2}</Typography>
                     </Box>
                   </Slide>
 
                   <Slide direction={"up"} in={myView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
                       {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about}</Typography> */}
-                      <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle} >{about_2}</Typography>
+                      <Typography color='secondary.light'  variant='h6' align='center' sx={quoteStyle} >{about_2}</Typography>
                     </Box>
                   </Slide>
                 </Box>
