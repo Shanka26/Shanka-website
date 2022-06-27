@@ -91,7 +91,7 @@ function App() {
   input:{color: '#fff'}
 }
 let quoteStyle= {
-  fontSize:{xs:14,sm:16,md:20,lg:24}
+  fontSize:{xs:18,sm:20,md:24,lg:28}
 }
 
 
@@ -182,30 +182,30 @@ let quoteStyle= {
       
       
       <Box height={'100vh'} justifyContent='center' alignItems='center'>
-        <Grid  height='100%' container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:1,sm:4,md:8,lg:12},pb:{xs:12}}}>
+        <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:1,sm:4,md:8,lg:12},pb:{xs:12}}}>
 
-          <Grid container item xs={6} justifyContent='space-between'>
+          <Grid container item xs={5} justifyContent='space-evenly' flexDirection='column'>
             
-          <Grid item xs={6} >
+          <Box   backgroundColor='primary.dark'>
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
                 <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote1}</Typography>
                 <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author1}</Typography>
               </Box>
             </Slide>
-            </Grid>
+            </Box>
 
-            <Grid container item alignItems='center' xs={6} >
+            <Box>
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
-              <Box justifyContent='center'>
+              <Box >
                 <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
                 <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
               </Box>
             </Slide>
-            </Grid>
+            </Box>
           </Grid>
 
-          <Grid container item alignItems='center' justifyContent='flex-start' direction='column' xs={6} >
+          <Grid container item alignItems='center' sx={{pt:4}} direction='column' xs={7} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
