@@ -15,14 +15,14 @@ const style = {
     width:'300px',
     height:'340px',
     margin:2,
-    boxShadow:0,
-    borderRadius:4,
+    boxShadow:4,
+    borderRadius:2,
     backgroundColor:'secondary.main',
     '&:hover':{
         backgroundColor:'primary.mid',
         // backgroundColor: rgba(0,0,0,0.25),
         // backgroundImage: `url()`, 
-        boxShadow:20,
+        boxShadow:8,
     }
 };
 
@@ -54,7 +54,7 @@ const Project = ({title,description,image,tags,link}) => {
             </Grid>
             
             <Grid container direction='column' item  xs={4} alignItems='center' justifyContent='space-around' sx={{display:visible}}> 
-            <Grid container spacing ={1} justifyContent='center' px={8}>
+            <Grid container spacing ={1} justifyContent='center' px={8} py={1}>
 
                 {tags.map((e,i,)=>(
                     <Grid item>
