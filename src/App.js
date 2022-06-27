@@ -100,7 +100,7 @@ function App() {
   input:{color: '#fff'}
 }
 let quoteStyle= {
-  fontSize:{xs:10,sm:16,md:24,lg:28}
+  fontSize:{xs:18,sm:20,md:24,lg:28}
 }
 
 
