@@ -9,7 +9,7 @@ const buttonStyle = {
   color: 'primary.mid',
   fontSize:{xs:12,sm:16,md:20,lg:24},
   height:{xs:'48px',md:'80px'},
-  paddingX:{xs:0,sm:2,md:4},
+  paddingX:{xs:1,sm:2,md:4},
   borderRadius:0,
   '&:hover':{
     backgroundColor:'rgba(50,50,50,0.5)',
@@ -34,7 +34,7 @@ const Header = ({about,projects,contact}) => {
   return (
     
    <AppBar position="sticky" sx={{backgroundColor:'rgba(0,0,0,0.5)',boxShadow:4,margin:0, padding:{xs:0,md:0}}}>
-       <Toolbar sx={{display:'flex', margin:0,padding:0}}>
+       <Toolbar sx={{display:'flex', margin:0,paddingX:2}}>
 
          <Grid container>
 
@@ -44,8 +44,8 @@ const Header = ({about,projects,contact}) => {
 
            <Grid item container xs={9} justifyContent="flex-end">
            <Stack direction='row' >
-              <Button sx={buttonStyle}   onClick={()=>{scrollTo(about)}}>About me</Button>
-              <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>My projects</Button>
+              <Button sx={buttonStyle}   onClick={()=>{scrollTo(about)}}>About</Button>
+              <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>Projects</Button>
               <Button sx={buttonStyle} onClick={()=>{scrollTo(contact)}}>Get in touch</Button>
             </Stack>
            </Grid>
