@@ -178,7 +178,7 @@ let quoteStyle= {
       
       
       <Box height={'100vh'} justifyContent='center' alignItems='flex-start'>
-        <Grid  height='100%' container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},pb:{xs:12}}}>
+        <Grid  height='100%' container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:1,sm:4,md:8,lg:12},pb:{xs:12}}}>
 
           <Grid container item xs={3} justifyContent='space-between'>
             
