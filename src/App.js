@@ -178,9 +178,9 @@ let quoteStyle= {
       
       
       <Box height={'100vh'} justifyContent='center' alignItems='flex-start'>
-        <Grid  height='100%' container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},py:{xs:4,sm:6,md:8,lg:12}}}>
+        <Grid  height='100%' container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},py:{xs:12}}}>
 
-          <Grid container item xs={4} justifyContent='space-between'>
+          <Grid container item xs={3} justifyContent='space-between'>
             
           <Grid item xs={6} >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
@@ -201,7 +201,7 @@ let quoteStyle= {
             </Grid>
           </Grid>
 
-          <Grid container item alignItems='center' justifyContent='flex-end' direction='column' xs={2} >
+          <Grid container item alignItems='center' justifyContent='flex-end' direction='column' xs={3} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
@@ -216,7 +216,7 @@ let quoteStyle= {
 
           </Grid>
 
-          <Grid container item justifyContent="center" alignItems='flex-start'  xs={2}  ref={aboutRef}>
+          <Grid container item justifyContent="center" alignItems='flex-start'  xs={3}  ref={aboutRef}>
           
           <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
             <Box alignItems="center" >
@@ -228,7 +228,7 @@ let quoteStyle= {
             
           </Grid>
 
-          <Grid container item xs={4}  justifyContent='space-between' alignItems='flex-end'>
+          <Grid container item xs={3}  justifyContent='space-between' alignItems='flex-end'>
             
             
             <Grid item xs={6}>

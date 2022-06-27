@@ -12,8 +12,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const style = {
     
-    width:'380px',
-    height:'460px',
+    width:'320px',
+    height:'380px',
     margin:2,
     boxShadow:0,
     borderRadius:4,
@@ -44,8 +44,8 @@ const Project = ({title,description,image,tags,link}) => {
             </Grid>
             <Grid container item  alignItems='flex-start' xs={9}  display={imgVisible}>
                 <Box >
-                    <Image src={image} shift="top" duration={700}  width ={380} height={276}
-                    distance={400} shiftDuration={400} showLoading fit="fill"/>
+                    <Image src={image} shift="top" duration={700}  width ={320} height={260}
+                    distance={400} shiftDuration={400} showLoading fit="cover"/>
                 </Box>
                 
             </Grid>
