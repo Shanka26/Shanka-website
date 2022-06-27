@@ -19,7 +19,7 @@ function App() {
   let aboutRef = useRef()
   let projectsRef = useRef()
   let contactRef = useRef()
-  let [view , setView] = useState(0)
+  let [view , setView] = useState(1)
   let [about , setAbout] = useState("")
   let [about2 , setAbout2] = useState("")
   let infoRef= useRef()
@@ -122,18 +122,22 @@ let quoteStyle= {
     if(view==1){
       setAbout("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
       setAbout2("My aim in life is to grow everyday and enjoy myself while doing so.")
+      
+      setQuote1('“ I used to be an adventurer like you. Then I took an arrow in the knee. ”')
+      setAuthor1("~ Whiterun guard")
 
-      setQuote1('“ It is better to light a candle than curse the darkness ”')
-      setAuthor1("~ Chinese proverb")
+      setQuote2('“ Ten out of ten people die, so don\'t take life too seriously. ”')
+      setAuthor2("~ Henry Winkler")
 
-      setQuote2('“ Be kind to your future self ”')
-      setAuthor2("~ Someone very wise")
 
-      setQuote3('“ I used to be an adventurer like you. Then I took an arrow in the knee. ”')
-      setAuthor3("~ Whiterun guard")
 
-      setQuote4('“ Ten out of ten people die, so don\'t take life too seriously. ”')
-      setAuthor4("~ Henry Winkler")
+      setQuote3('“ It is better to light a candle than curse the darkness ”')
+      setAuthor3("~ Chinese proverb")
+
+      setQuote4('“ Be kind to your future self ”')
+      setAuthor4("~ Someone very wise")
+
+      
     }
     else if(view==2){
       setAbout("I design and develop responsive web applications.")
@@ -142,11 +146,11 @@ let quoteStyle= {
       setQuote1('“A true master is an eternal student.”')
       setAuthor1("~ Master Yi")
 
-      setQuote2('“ Choose a job you love, and you will never have to work a day in your life ”')
-      setAuthor2("~ Confucious")
+      setQuote2('“ Programming isn\'t about what you know, it\'s about what you can figure out. ”')
+      setAuthor2("~ Chris Pine")
 
-      setQuote3('“ Programming isn\'t about what you know, it\'s about what you can figure out. ”')
-      setAuthor3("~ Chris Pine")
+      setQuote3('“ Choose a job you love, and you will never have to work a day in your life ”')
+      setAuthor3("~ Confucious")
 
       setQuote4('“ The most damaging phrase in the language is.. it\'s always been done this way. ”')
       setAuthor4("~ Grace Hopper")
@@ -177,10 +181,10 @@ let quoteStyle= {
         <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
       
       
-      <Box height={'100vh'} justifyContent='center' alignItems='flex-start'>
+      <Box height={'100vh'} justifyContent='center' alignItems='center'>
         <Grid  height='100%' container alignItems='space-around' direction='column' sx={{mx:0,px:{xs:1,sm:4,md:8,lg:12},pb:{xs:12}}}>
 
-          <Grid container item xs={3} justifyContent='space-between'>
+          <Grid container item xs={6} justifyContent='space-between'>
             
           <Grid item xs={6} >
           <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
@@ -191,9 +195,9 @@ let quoteStyle= {
             </Slide>
             </Grid>
 
-            <Grid item xs={6} >
+            <Grid container item alignItems='center' xs={6} >
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
-              <Box>
+              <Box justifyContent='center'>
                 <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
                 <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
               </Box>
@@ -201,7 +205,7 @@ let quoteStyle= {
             </Grid>
           </Grid>
 
-          <Grid container item alignItems='center' justifyContent='flex-end' direction='column' xs={3} >
+          <Grid container item alignItems='center' justifyContent='flex-start' direction='column' xs={6} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
@@ -214,21 +218,20 @@ let quoteStyle= {
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
+            <Grid container item justifyContent="center" alignItems='flex-start'  xs={3}  ref={aboutRef}>
+              <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
+                <Box alignItems="center" >
+                  {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography> */}
+                  <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle}>{about2}</Typography>
+                </Box>
+              </Slide>
+            </Grid>
+
           </Grid>
 
-          <Grid container item justifyContent="center" alignItems='flex-start'  xs={3}  ref={aboutRef}>
           
-          <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
-            <Box alignItems="center" >
-              {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography> */}
-              <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle}>{about2}</Typography>
-            </Box>
-          </Slide>
-              
-            
-          </Grid>
 
-          <Grid container item xs={3}  justifyContent='space-between' alignItems='flex-end'>
+          {/* <Grid container item xs={3}  justifyContent='space-between' alignItems='flex-end'>
             
             
             <Grid item xs={6} sx={{pr:2}}>
@@ -250,7 +253,7 @@ let quoteStyle= {
 
           </Grid>
 
-          </Grid>
+          </Grid> */}
 
 
 
