@@ -1,5 +1,5 @@
 import React, {useState,useEffect,useRef}  from 'react'
-import {Box, Button, Fab, Grid, Stack, TextField, Typography} from '@mui/material'
+import {Box, Button, Fab, Link, Grid, Stack, TextField, Typography} from '@mui/material'
 import Header from './components/Header'
 import RedditIcon from '@mui/icons-material/Reddit';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -276,7 +276,7 @@ let quoteStyle= {
       
       <Box ref = {projectsRef}
       sx={{p:4, pt:{xs:2,sm:4,md:8,lg:12},pb:12, height:1 ,}}>
-        <Typography variant="h2" align='center' color='secondary.light' sx={{marginBottom:8}}>Projects</Typography>
+        <Typography variant="h2" align='center' color='primary.mid' sx={{marginBottom:8}}>Projects</Typography>
         <Box >
           <Grid container justifyContent='center' spacing={0}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
@@ -305,18 +305,18 @@ let quoteStyle= {
       <Box  ref = {contactRef} 
       pt={{xs:2,sm:4,md:8,lg:12}} pb={4} sx={{ height:1}}>
         
-          <Box mb={2} alignItems='center'>
-            <Typography color='secondary.light' mb={2} variant='h2'  align='center'>Get In Touch</Typography>
-            <Typography color='secondary.light' variant='h5' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
-            <Typography color='secondary.light' variant='h5' align='center'>Feel free to send me a message or follow me on social media. </Typography>
+          <Box mb={2} alignItems='center' sx={{px:12}}>
+            <Typography color='primary.mid' mb={2} variant='h2'  align='center'>Get In Touch</Typography>
+            <Typography color='secondary.light' variant='h4' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
+            <Typography color='secondary.light' variant='h4' align='center'>Feel free to send me a message or follow me on social media. </Typography>
 
             
           </Box>
 
           <Stack direction='row' gap={2} justifyContent='center'>
-            <Fab sx={fabStyle} size='medium'><TwitterIcon/></Fab>
-            <Fab sx={fabStyle} size='medium'><RedditIcon/></Fab>
-            <Fab sx={fabStyle} size='medium'><GitHubIcon/></Fab>
+            <Fab sx={fabStyle} size='medium' component={Link} href='https://twitter.com/Shanka26/' target="_blank" rel="noopener"><TwitterIcon/></Fab>
+            <Fab sx={fabStyle} size='medium'  component={Link} href='https://www.reddit.com/user/MinisterShanka' target="_blank" rel="noopener"><RedditIcon/></Fab>
+            <Fab sx={fabStyle} size='medium' component={Link} href='https://github.com/Shanka26' target="_blank" rel="noopener"><GitHubIcon/></Fab>
             </Stack>
 
             <Box mx={{xs:4,sm:8,md:16,lg:24}} my={2} >

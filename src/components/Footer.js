@@ -1,20 +1,23 @@
 import React from 'react'
-import {  AppBar,Typography, Toolbar, Stack,Button, Grid } from '@mui/material'
+import {  AppBar,Typography, Toolbar, Stack,Button, Grid, Box } from '@mui/material'
 
 const Footer = () => {
   return (
     <AppBar position="sticky" sx={{background:"linear-gradient(to bottom,#333333,#006666)",
-    boxShadow:0,padding:4}}>
+    boxShadow:0,padding:{xs:6}}}>
        <Toolbar sx={{display:'flex'}}>
 
-         <Grid container>
+         <Box width={1}>
 
-           <Grid item xs={4}>
-              <Typography variant="h5" fontSize={{xs:48,md:60}}>Footer</Typography>
-           </Grid>
+           
+              <Typography align='center' variant="h6" color='secondary.light'>
+              {"Copyright © "} Shanka Tech - Created by Shanka
+              </Typography>
+              <Typography align='center' variant="h6" color='secondary.light'>shamarl26leonard@gmail.com</Typography>
+           
 
           
-         </Grid>
+         </Box>
        
             
             
