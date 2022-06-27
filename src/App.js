@@ -91,7 +91,7 @@ function App() {
   input:{color: '#fff'}
 }
 let quoteStyle= {
-  fontSize:{xs:18,sm:20,md:24,lg:28}
+  fontSize:{xs:14,sm:16,md:20,lg:24}
 }
 
 
@@ -220,7 +220,7 @@ let quoteStyle= {
           
           <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
             <Box alignItems="center" >
-              <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography>
+              {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography> */}
               <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle}>{about2}</Typography>
             </Box>
           </Slide>
@@ -231,7 +231,7 @@ let quoteStyle= {
           <Grid container item xs={3}  justifyContent='space-between' alignItems='flex-end'>
             
             
-            <Grid item xs={6}>
+            <Grid item xs={6} sx={{pr:2}}>
             <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
                 <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote3}</Typography>
@@ -240,7 +240,7 @@ let quoteStyle= {
             </Slide>
             </Grid>
 
-            <Grid item xs={6}>
+            <Grid item xs={6} sx={{pl:2}}>
             <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
               <Box>
               <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote4}</Typography>
