@@ -12,8 +12,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const style = {
     
-    width:'320px',
-    height:'380px',
+    width:'300px',
+    height:'340px',
     margin:2,
     boxShadow:0,
     borderRadius:4,
@@ -39,12 +39,12 @@ const Project = ({title,description,image,tags,link}) => {
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column' height={1}>
         {/* <Image src={pomonotoScreen}/> */}
-            <Grid container item xs={3} alignItems='center' justifyContent='center'>
+            <Grid container item xs={1} sx={{p:2}}alignItems='center' justifyContent='center'>
                 <Typography color={visible=="none"?'secondary.dark':'secondary.light'} fontSize={'2.3em'} variant='h3' align ='center'>{title}</Typography>
             </Grid>
             <Grid container item  alignItems='flex-start' xs={9}  display={imgVisible}>
                 <Box >
-                    <Image src={image} shift="top" duration={700}  width ={320} height={260}
+                    <Image src={image} shift="top" duration={700} sx={{borderRadius:0.6}} width ={300} height={240}
                     distance={400} shiftDuration={400} showLoading fit="cover"/>
                 </Box>
                 

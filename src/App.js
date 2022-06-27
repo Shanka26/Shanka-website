@@ -322,8 +322,8 @@ let quoteStyle= {
         
           <Box mb={2} alignItems='center' sx={{px:4}}>
             <Typography color='primary.mid' mb={2} variant='h2'  align='center'>Get In Touch</Typography>
-            <Typography color='secondary.light' variant='h4' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
-            <Typography color='secondary.light' variant='h4' align='center'>Feel free to send me a message or follow me on social media. </Typography>
+            <Typography color='secondary.light' variant='h5' align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
+            <Typography color='secondary.light' variant='h5' align='center'>Feel free to send me a message or follow me on social media. </Typography>
 
             
           </Box>
