@@ -7,8 +7,8 @@ import { useTheme } from '@mui/material/styles';
 
 const buttonStyle = {
   color: 'primary.mid',
-  fontSize:{xs:9,sm:16,md:20,lg:24},
-  height:{xs:'64px',md:'80px'},
+  fontSize:{xs:12,sm:16,md:20,lg:24},
+  height:{xs:'56px',md:'80px'},
   paddingX:{xs:1,sm:2,md:4},
   borderRadius:0,
   '&:hover':{

@@ -19,19 +19,22 @@ function App() {
   let aboutRef = useRef()
   let projectsRef = useRef()
   let contactRef = useRef()
-  let [view , setView] = useState(0)
-  let [about , setAbout] = useState("")
-  let [about2 , setAbout2] = useState("")
+  let [myView , setMyView] = useState(false)
+  let [jobView , setJobView] = useState(false)
+  let [about , setAbout] = useState("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
+  let [about_2 , setAbout_2] = useState("My aim in life is to grow everyday and enjoy myself while doing so.")
+  let [about2 , setAbout2] = useState("I design and develop responsive web applications")
+  let [about2_2 , setAbout2_2] = useState("I love learning about new technologies and improving my craft")
   let infoRef= useRef()
 
-  let[quote1 , setQuote1] = useState("")
-  let[author1 , setAuthor1] = useState("")
-  let[quote2 , setQuote2] = useState("")
-  let[author2 , setAuthor2] = useState("")
-  let[quote3 , setQuote3] = useState("")
-  let[author3 , setAuthor3] = useState("")
-  let[quote4 , setQuote4] = useState("")
-  let[author4 , setAuthor4] = useState("")
+  let[quote1 , setQuote1] = useState("“ Ten out of ten people die, so don\'t take life too seriously. ”")
+  let[author1 , setAuthor1] = useState("~ Henry Winkler")
+  let[quote2 , setQuote2] = useState("“ I used to be an adventurer like you. Then I took an arrow in the knee. ”")
+  let[author2 , setAuthor2] = useState("~ Whiterun guard")
+  let[quote3 , setQuote3] = useState("“ Programming isn\'t about what you know, it\'s about what you can figure out. ”")
+  let[author3 , setAuthor3] = useState("~ Chris Pine")
+  let[quote4 , setQuote4] = useState("“A true master is an eternal student.”")
+  let[author4 , setAuthor4] = useState("~ Master Yi")
 
   
   let[emailName,setEmailName]=useState("")
@@ -118,62 +121,40 @@ let quoteStyle= {
     const anchor = document.querySelector(section)
     anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-  useEffect(()=>{
-    if(view==1){
-      setAbout("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
-      setAbout2("My aim in life is to grow everyday and enjoy myself while doing so.")
+  
+      // setAbout("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
+      // setAbout2("My aim in life is to grow everyday and enjoy myself while doing so.")
       
-      setQuote1('“ I used to be an adventurer like you. Then I took an arrow in the knee. ”')
-      setAuthor1("~ Whiterun guard")
+      // setQuote1('“ I used to be an adventurer like you. Then I took an arrow in the knee. ”')
+      // setAuthor1("~ Whiterun guard")
 
-      setQuote2('“ Ten out of ten people die, so don\'t take life too seriously. ”')
-      setAuthor2("~ Henry Winkler")
+      // setQuote2('“ Ten out of ten people die, so don\'t take life too seriously. ”')
+      // setAuthor2("~ Henry Winkler")
 
 
 
-      setQuote3('“ It is better to light a candle than curse the darkness ”')
-      setAuthor3("~ Chinese proverb")
+      // setQuote3('“ It is better to light a candle than curse the darkness ”')
+      // setAuthor3("~ Chinese proverb")
 
-      setQuote4('“ Be kind to your future self ”')
-      setAuthor4("~ Someone very wise")
+      // setQuote4('“ Be kind to your future self ”')
+      // setAuthor4("~ Someone very wise")
 
+      // set2About("I design and develop responsive web applications.")
+      // set2About2("I love learning new technologies and improving my craft.")
+
+      // setQuote1('“A true master is an eternal student.”')
+      // setAuthor1("~ Master Yi")
+
+      // setQuote2('“ Programming isn\'t about what you know, it\'s about what you can figure out. ”')
+      // setAuthor2("~ Chris Pine")
+
+      // setQuote3('“ Choose a job you love, and you will never have to work a day in your life ”')
+      // setAuthor3("~ Confucious")
+
+      // setQuote4('“ The most damaging phrase in the language is.. it\'s always been done this way. ”')
+      // setAuthor4("~ Grace Hopper")
       
-    }
-    else if(view==2){
-      setAbout("I design and develop responsive web applications.")
-      setAbout2("I love learning new technologies and improving my craft.")
-
-      setQuote1('“A true master is an eternal student.”')
-      setAuthor1("~ Master Yi")
-
-      setQuote2('“ Programming isn\'t about what you know, it\'s about what you can figure out. ”')
-      setAuthor2("~ Chris Pine")
-
-      setQuote3('“ Choose a job you love, and you will never have to work a day in your life ”')
-      setAuthor3("~ Confucious")
-
-      setQuote4('“ The most damaging phrase in the language is.. it\'s always been done this way. ”')
-      setAuthor4("~ Grace Hopper")
-      
-    }
-    else{
-      setAbout(" ")
-      setAbout2(" ")
-
-      setQuote1(' ')
-      setAuthor1(" ")
-
-      setQuote2(' ')
-      setAuthor2(" ")
-
-      setQuote3(' ')
-      setAuthor3(" ")
-
-      setQuote4(' ')
-      setAuthor4(" ")
-    }
-
-  },[view])
+    
 
   return (
     <Box ref={aboutRef} backgroundColor='secondary.dark' width='100vw' sx={{...scrollBar,display:'flex',flexDirection:'column',}}>
@@ -187,44 +168,69 @@ let quoteStyle= {
           <Grid container item xs={5} justifyContent='space-evenly' flexDirection='column'>
             
           <Box >
-          <Slide direction={"right"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
-              <Box>
-                <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote1}</Typography>
-                <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author1}</Typography>
-              </Box>
-            </Slide>
+                <Slide direction={"right"} in={myView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
+                  <Box>
+                    <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote1}</Typography>
+                    <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author1}</Typography>
+                  </Box>
+                </Slide>
+
+                <Slide direction={"right"} in={jobView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
+                  <Box>
+                    <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote3}</Typography>
+                    <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author3}</Typography>
+                  </Box>
+                </Slide>
             </Box>
 
+
+
             <Box>
-            <Slide direction={"left"} in={view>0} container={aboutRef.current} timeout={{enter:600,exit:10}}>
-              <Box >
-                <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
-                <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
-              </Box>
-            </Slide>
+                <Slide direction={"left"} in={myView} container={aboutRef.current}  timeout={{enter:600,exit:0}}>
+                  <Box >
+                    <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
+                    <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
+                  </Box>
+                </Slide>
+
+                <Slide direction={"left"} in={jobView} container={aboutRef.current}  timeout={{enter:600,exit:0}}>
+                  <Box >
+                    <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote4}</Typography>
+                    <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author4}</Typography>
+                  </Box>
+                </Slide>
             </Box>
           </Grid>
 
           <Grid container item alignItems='center' sx={{pt:0}} direction='column' xs={7} >
             <Typography color='secondary.light' variant='h3' align='center'>
               Hi, I'm 
-              <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setView(1)}} onMouseLeave={()=>{setView(0)}}
+              <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
             <Typography color='secondary.light' variant='h3' align='center'>
               I'm a full-stack
-              <Typography display='inline'  variant='inherit'onMouseEnter={()=>{setView(2)}} onMouseLeave={()=>{setView(0)}}
+              <Typography display='inline'  variant='inherit'onMouseEnter={()=>{setJobView(true);setMyView(false)}} onMouseLeave={()=>{setJobView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
             <Grid container item justifyContent="center" alignItems='flex-start'  xs={3} sx={{pt:2}} ref={aboutRef}>
-              <Slide direction={"up"} in={view>0} container={aboutRef.current} timeout={{enter:800,exit:10}}>
-                <Box alignItems="center" >
-                  {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle}>{about}</Typography> */}
-                  <Typography color='secondary.light'  variant='h5' align='center' >{about2}</Typography>
+                <Box alignItems="flex-start">
+                  <Slide direction={"down"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
+                    <Box alignItems="center" >
+                      <Typography color='secondary.light' variant='h5' align='center' >{about2}</Typography>
+                      <Typography color='secondary.light'  variant='h5' align='center' >{about2_2}</Typography>
+                    </Box>
+                  </Slide>
+
+                  <Slide direction={"down"} in={myView} container={aboutRef.current} timeout={{enter:800,exit:0}}>
+                    <Box alignItems="center" >
+                      <Typography color='secondary.light' variant='h5' align='center' >{about}</Typography>
+                      <Typography color='secondary.light'  variant='h5' align='center' >{about_2}</Typography>
+                    </Box>
+                  </Slide>
                 </Box>
-              </Slide>
             </Grid>
 
           </Grid>
