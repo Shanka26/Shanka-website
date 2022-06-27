@@ -68,8 +68,14 @@ function App() {
     fontSize:{xs:32,md:40},
     '&:hover':{
       color:'primary.mid', 
-      fontSize:{xs:40,md:48},
+      fontSize:{xs:36,md:44},
     }
+    
+  }
+
+  let homeStyle = {
+    color:'secondary.light',
+    fontSize:{xs:28,md:36},
     
   }
 
@@ -94,7 +100,7 @@ function App() {
   input:{color: '#fff'}
 }
 let quoteStyle= {
-  fontSize:{xs:18,sm:20,md:24,lg:28}
+  fontSize:{xs:10,sm:16,md:24,lg:28}
 }
 
 
@@ -163,9 +169,9 @@ let quoteStyle= {
       
       
       <Box height={'100vh'} justifyContent='center' alignItems='center'>
-        <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},pb:{xs:12}}}>
+        <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},pb:{xs:0}}}>
 
-          <Grid container item xs={5} justifyContent='space-evenly' flexDirection='column'>
+          <Grid container item xs={5} justifyContent='space-evenly' sx={{pt:2}}flexDirection='column'>
             
           <Box >
                 <Slide direction={"right"} in={myView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
@@ -202,14 +208,14 @@ let quoteStyle= {
             </Box>
           </Grid>
 
-          <Grid container item alignItems='center' sx={{pt:0}} direction='column' xs={7} >
-            <Typography color='secondary.light' variant='h3' align='center'>
+          <Grid container item xs={5} alignItems='center' justifyContent='flex-start' sx={{pt:0}} direction='column'  >
+            <Typography color='secondary.light' variant='h3' sx={homeStyle}align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
-            <Typography color='secondary.light' variant='h3' align='center'>
+            <Typography color='secondary.light' variant='h3' sx={homeStyle} align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit'onMouseEnter={()=>{setJobView(true);setMyView(false)}} onMouseLeave={()=>{setJobView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
@@ -219,14 +225,14 @@ let quoteStyle= {
                 <Box alignItems="flex-start">
                   <Slide direction={"up"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
-                      <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about2}</Typography>
+                      {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about2}</Typography> */}
                       <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle} >{about2_2}</Typography>
                     </Box>
                   </Slide>
 
                   <Slide direction={"up"} in={myView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
-                      <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about}</Typography>
+                      {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about}</Typography> */}
                       <Typography color='secondary.light'  variant='h5' align='center' sx={quoteStyle} >{about_2}</Typography>
                     </Box>
                   </Slide>
