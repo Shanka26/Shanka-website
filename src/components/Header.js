@@ -1,6 +1,9 @@
 import React, {useRef}  from 'react'
 import {  AppBar,Typography, Toolbar, Stack,Button, Grid } from '@mui/material'
 import shankaLight from '../res/shanka-logo2.png'
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
 
 const buttonStyle = {
   color: 'primary.mid',
@@ -15,7 +18,8 @@ const buttonStyle = {
   }
 }
 const Header = ({about,projects,contact}) => {
-  
+  const size_theme = useTheme()
+  const md_up = useMediaQuery(size_theme.breakpoints.up('md'));
 
   let scroll = (section)=>{
     const anchor = document.querySelector(section)
@@ -35,7 +39,7 @@ const Header = ({about,projects,contact}) => {
          <Grid container>
 
            <Grid container item xs={3}  alignItems='center'>
-              <img width={64} src={shankaLight} onClick={()=>{scrollTo(about)}}/>
+              <img width={md_up?64:40} src={shankaLight} onClick={()=>{scrollTo(about)}}/>
            </Grid>
 
            <Grid item container xs={9} justifyContent="flex-end">
