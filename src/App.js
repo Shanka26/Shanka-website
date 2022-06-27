@@ -19,7 +19,7 @@ function App() {
   let aboutRef = useRef()
   let projectsRef = useRef()
   let contactRef = useRef()
-  let [view , setView] = useState(1)
+  let [view , setView] = useState(0)
   let [about , setAbout] = useState("")
   let [about2 , setAbout2] = useState("")
   let infoRef= useRef()
