@@ -21,7 +21,7 @@ const style = {
     '&:hover':{
         backgroundColor:'primary.mid',
         // backgroundColor: rgba(0,0,0,0.25),
-        backgroundImage: `url()`, 
+        // backgroundImage: `url()`, 
         boxShadow:20,
     }
 };
@@ -42,14 +42,14 @@ const Project = ({title,description,image,tags,link}) => {
             <Grid container item xs={1} sx={{p:2}}alignItems='center' justifyContent='center'>
                 <Typography color={visible=="none"?'secondary.dark':'secondary.light'} fontSize={'2.3em'} variant='h3' align ='center'>{title}</Typography>
             </Grid>
-            <Grid container item  alignItems='flex-start' xs={9}  display={imgVisible}>
+            <Grid container item alignItems='flex-start' xs={9}  display={imgVisible}>
                 <Box >
-                    <Image src={image} shift="top" duration={700} sx={{borderRadius:0.6}} width ={300} height={240}
+                    <Image src={image} shift="top" duration={700} sx={{borderRadius:0.6}} width ={300} height={235}
                     distance={400} shiftDuration={400} showLoading fit="cover"/>
                 </Box>
                 
             </Grid>
-            <Grid container item alignItems='flex-start' xs={4} sx={{ display:visible,px:4}}>
+            <Grid container width={"300px"} item alignItems='flex-start' xs={4} sx={{ display:visible,px:4}}>
                 <Typography variant='body1' color='secondary.light' align ='center'>{description}</Typography>
             </Grid>
             
