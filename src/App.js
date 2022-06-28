@@ -40,6 +40,7 @@ function App() {
   let[emailName,setEmailName]=useState("")
   let[emailAddress,setEmailAddress]=useState("")
   let[emailMessage,setEmailMessage]=useState("")
+  let[emailError,setEmailError]=useState("none")
 
 
 
@@ -119,11 +120,14 @@ let quoteStyle= {
           setEmailAddress("")
           setEmailName("")
           setEmailMessage("")
+          setEmailError('none')
         })
         .catch((err)=>{
           console.log('FAILED...', err);
+          setEmailError('block')
         })
     }
+    else{setEmailError('block')}
   }
 
   let scroll = (section)=>{
@@ -378,7 +382,7 @@ let quoteStyle= {
               </Grid>
 
               <Grid container item xs={12} justifyContent="space-between">
-                <Typography color='secondary.light' variant='h6'>You should recieve a confirmation email</Typography>
+                <Typography color='red' variant='h6'  sx={{display:emailError}}>Invalid, please check your information and try again</Typography>
                 <Button variant='contained' sx={{color: 'secondary.light'}} onClick={(e)=>{sendEmail()}} >Send</Button>
               </Grid>
               
