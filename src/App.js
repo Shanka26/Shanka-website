@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Footer from './components/Footer';
 import Project from './components/Project';
-// import { send } from 'emailjs-com';
+import { send } from '@emailjs/browser';
 import Slide from '@mui/material/Slide';
 import pomonotoScreen from './res/pomonotoMock.webp'
 import dcoreScreen from './res/dcoreMock.webp'
@@ -106,21 +106,24 @@ let quoteStyle= {
 
   let sendEmail=async()=>{
     console.log('shoot')
-    // if(/\S+@\S+\.\S+/.test(emailAddress)&&emailAddress!==""&&emailMessage!==""){
-    //   send('service_jgqvxe4','template_gi813u2',
-    //   {from_name:emailName,
-    //     to_name:'Shanka',
-    //     message:emailMessage,
-    //     reply_to:emailAddress},
-    //     'PMbuGmUBbitnn0i_o'
-    //     )
-    //     .then((res)=>{
-    //       console.log('SUCCESS!', res.status, res.text)
-    //     })
-    //     .catch((err)=>{
-    //       console.log('FAILED...', err);
-    //     })
-    // }
+    if(/\S+@\S+\.\S+/.test(emailAddress)&&emailAddress!==""&&emailMessage!==""){
+      send('service_jgqvxe4','template_gi813u2',
+      {from_name:emailName,
+        to_name:'Shanka',
+        message:emailMessage,
+        reply_to:emailAddress},
+        'PMbuGmUBbitnn0i_o'
+        )
+        .then((res)=>{
+          console.log('SUCCESS!', res.status, res.text)
+          setEmailAddress("")
+          setEmailName("")
+          setEmailMessage("")
+        })
+        .catch((err)=>{
+          console.log('FAILED...', err);
+        })
+    }
   }
 
   let scroll = (section)=>{
@@ -296,7 +299,7 @@ let quoteStyle= {
           <Grid container justifyContent='center' spacing={0}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
               <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
-              description="Pomodoro timer with a helpful twist, During work phases, users can jot down disappearing notes and be remided of them later when on break."/>
+              description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and be remided of them later when on break."/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://dcore.netlify.app/"
