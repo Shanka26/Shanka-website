@@ -101,7 +101,7 @@ function App() {
   input:{color: '#fff'}
 }
 let quoteStyle= {
-  fontSize:{xs:18,sm:20,md:24,lg:28}
+  // fontSize:{xs:18,sm:20,md:24,lg:28}
 }
 
 
@@ -183,15 +183,15 @@ let quoteStyle= {
           <Box >
                 <Slide direction={"right"} in={myView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
                   <Box>
-                    <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote1}</Typography>
-                    <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author1}</Typography>
+                    <Typography color='secondary.light' variant='h4' align='left' sx={quoteStyle}>{quote1}</Typography>
+                    <Typography color='primary.mid' variant='h4' align='left' sx={quoteStyle}>{author1}</Typography>
                   </Box>
                 </Slide>
 
                 <Slide direction={"right"} in={jobView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
                   <Box>
-                    <Typography color='secondary.light' variant='h6' align='left' sx={quoteStyle}>{quote3}</Typography>
-                    <Typography color='primary.mid' variant='h6' align='left' sx={quoteStyle}>{author3}</Typography>
+                    <Typography color='secondary.light' variant='h4' align='left' sx={quoteStyle}>{quote3}</Typography>
+                    <Typography color='primary.mid' variant='h4' align='left' sx={quoteStyle}>{author3}</Typography>
                   </Box>
                 </Slide>
             </Box>
@@ -201,15 +201,15 @@ let quoteStyle= {
             <Box>
                 <Slide direction={"left"} in={myView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
                   <Box >
-                    <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
-                    <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
+                    <Typography color='secondary.light' variant='h4' align='right' sx={quoteStyle}>{quote2}</Typography>
+                    <Typography color='primary.mid' variant='h4' align='right' sx={quoteStyle}>{author2}</Typography>
                   </Box>
                 </Slide>
 
                 <Slide direction={"left"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:600,exit:0}}>
                   <Box >
-                    <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote4}</Typography>
-                    <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author4}</Typography>
+                    <Typography color='secondary.light' variant='h4' align='right' sx={quoteStyle}>{quote4}</Typography>
+                    <Typography color='primary.mid' variant='h4' align='right' sx={quoteStyle}>{author4}</Typography>
                   </Box>
                 </Slide>
             </Box>
@@ -233,14 +233,14 @@ let quoteStyle= {
                   <Slide direction={"up"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
                       {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about2}</Typography> */}
-                      <Typography color='secondary.light'  variant='h6' align='center' sx={quoteStyle} >{about2_2}</Typography>
+                      <Typography color='secondary.light'  variant='h4' align='center' sx={quoteStyle} >{about2_2}</Typography>
                     </Box>
                   </Slide>
 
                   <Slide direction={"up"} in={myView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
                       {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about}</Typography> */}
-                      <Typography color='secondary.light'  variant='h6' align='center' sx={quoteStyle} >{about_2}</Typography>
+                      <Typography color='secondary.light'  variant='h4' align='center' sx={quoteStyle} >{about_2}</Typography>
                     </Box>
                   </Slide>
                 </Box>
@@ -303,7 +303,7 @@ let quoteStyle= {
           <Grid container justifyContent='center' spacing={0}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
               <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
-              description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and be remided of them later when on break."/>
+              description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and see them when on break."/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://dcore.netlify.app/"

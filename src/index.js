@@ -31,17 +31,18 @@ const theme = createTheme({
     borderColor: "yellow !important"
   },
   typography:{
-    
-    h3:{
-      color:'primary.main',
-      fontSize:'1.9rem'
-    },
-    h5:{
-      fontSize:'1.2em'
-    },
-    h6:{
-      fontSize:'1.1em'
-    }
+
+    fontFamily:'Montserrat',
+    // h3:{
+    //   color:'primary.main',
+    //   fontSize:'1.9rem'
+    // },
+    // h5:{
+    //   fontSize:'1.2em'
+    // },
+    // h6:{
+    //   fontSize:'1.1em'
+    // }
   },
   '&::-webkit-scrollbar': {
     width: '0.4em'

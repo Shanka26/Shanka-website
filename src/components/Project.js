@@ -43,8 +43,8 @@ const Project = ({title,description,image,tags,link}) => {
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column'  alignItems='center' height={1}>
         {/* <Image src={pomonotoScreen}/> */}
-            <Grid container item xs={1} sx={{p:2}} alignItems='center' justifyContent='center'>
-                <Typography color={visible=="none"?'secondary.dark':'secondary.light'} fontSize={'2.3em'} variant='h3' align ='center'>{title}</Typography>
+            <Grid container item xs={1} sx={{p:1}} alignItems='center' justifyContent='center'>
+                <Typography color={visible=="none"?'secondary.dark':'secondary.light'} variant='h4' align ='center'>{title}</Typography>
             </Grid>
             <Grid container item alignItems='flex-start' justifyContent='center' xs={9} display={imgVisible}>
                 <Box alignItems='center' justifyContent='center' display='flex'>
@@ -64,8 +64,7 @@ const Project = ({title,description,image,tags,link}) => {
                     <Grid item>
                         <Chip sx={{backgroundColor:'rgba(0,0,0,.2)',color:'secondary.light', fontSize:{xs:12,md:18}}} label = {e}/>
                     </Grid>
-                    
-                    
+ 
                 ))}
 
             </Grid> 
