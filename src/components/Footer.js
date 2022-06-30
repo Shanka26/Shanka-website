@@ -17,7 +17,7 @@ const Footer = () => {
     boxShadow:0,paddingX:{xs:1},paddingY:{xs:8,md:8}}}>
        <Toolbar sx={{display:'flex'}}>
 
-         <Box width={1} alignItems="center">
+         <Box width={1} alignItems="flex-end">
 
            
               <Typography align='center' variant="h6" sx={textStyle}>
