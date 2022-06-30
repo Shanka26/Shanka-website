@@ -7,7 +7,7 @@ import { useTheme } from '@mui/material/styles';
 
 const buttonStyle = {
   color: 'primary.mid',
-  fontSize:{xs:12,sm:16,md:20,lg:24},
+  fontSize:{xs:13,sm:16,md:20,lg:24},
   height:{xs:'48px',md:'80px'},
   paddingX:{xs:1,sm:2,md:4},
   borderRadius:0,
@@ -46,7 +46,7 @@ const Header = ({about,projects,contact}) => {
            <Stack direction='row' >
               <Button sx={buttonStyle}   onClick={()=>{scrollTo(about)}}>About</Button>
               <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>Projects</Button>
-              <Button sx={buttonStyle} onClick={()=>{scrollTo(contact)}}>Get in touch</Button>
+              <Button sx={buttonStyle} onClick={()=>{scrollTo(contact)}}>Contact</Button>
             </Stack>
            </Grid>
          </Grid>
