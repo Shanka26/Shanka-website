@@ -20,7 +20,7 @@ const Footer = () => {
          <Box width={1} >
 
            
-              <Typography align='center' variant="h6" sx={textStyle}>
+              <Typography align='center' variant="h6" component='h1' sx={textStyle}>
               {"Copyright © "} Shanka Tech - Created by Shanka
               </Typography>
               <Typography align='center' variant="body1" sx={textStyle}>shamarl26leonard@gmail.com</Typography>
