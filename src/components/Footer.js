@@ -14,10 +14,10 @@ let emailStyle={
 const Footer = () => {
   return (
     <AppBar position="sticky" sx={{background:"linear-gradient(to bottom,#333333,#006666)",
-    boxShadow:0,paddingX:{xs:1},paddingY:{xs:8,md:8}}}>
+    boxShadow:0,paddingX:{xs:1},paddingTop:{xs:10,md:16},paddingBottom:{xs:2,md:4}}}>
        <Toolbar sx={{display:'flex'}}>
 
-         <Box width={1} alignItems="flex-end">
+         <Box width={1} >
 
            
               <Typography align='center' variant="h6" sx={textStyle}>
