@@ -319,6 +319,13 @@ let aboutStyle= {
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://dcore.netlify.app/"
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
+            <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
+            <Box class='academy-badge' width='50px'>
+            <Project title="SEO Certificate" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
+             tags={['SEO']} link='http://academy.hubspot.com/certification'
+              description='Obtained search engine optimization certification through hubspot academy'/>
+            </Box>
+            </Grid>
             
 
             
@@ -326,6 +333,7 @@ let aboutStyle= {
          
         </Box>
         
+    
 
       </Box>
 

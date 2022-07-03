@@ -48,8 +48,8 @@ const Project = ({title,description,image,tags,link}) => {
             </Grid>
             <Grid container item alignItems='flex-start' justifyContent='center' xs={9} display={imgVisible}>
                 <Box alignItems='center' justifyContent='center' display='flex'>
-                    <Image src={image} shift="top" duration={700} sx={{borderRadius:0.6,}} width={md_up?380:300} height={md_up?300:235}
-                    distance={400} shiftDuration={400} showLoading fit="fill"/>
+                    <Image src={image}  shift="top" duration={700} sx={{borderRadius:0.6,}} width={md_up?380:300} height={md_up?300:235}
+                    distance={400} shiftDuration={400} showLoading fit="cover"/>
                 </Box>
                 
             </Grid>
