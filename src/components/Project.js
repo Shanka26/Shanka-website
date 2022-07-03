@@ -34,17 +34,18 @@ const Project = ({title,description,image,tags,link}) => {
 
     let [visible,setVisible] = useState("none")
     let [imgVisible,setImgVisible] = useState("flex")
+    let [entered,setEntered] = useState(false)
     
 
   return (
-    <Paper sx={style} onMouseEnter={()=>{setVisible("flex");setImgVisible("none")}}
-     onMouseLeave={()=>{setVisible("none");setImgVisible("flex")}}>
+    <Paper sx={style} onMouseEnter={()=>{setEntered(true);if(link!=='null'){setVisible("flex");setImgVisible("none")}}}
+     onMouseLeave={()=>{setVisible("none");setImgVisible("flex");setEntered(false)}}>
         
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column'  alignItems='center' height={1}>
         {/* <Image src={pomonotoScreen}/> */}
             <Grid container item xs={1} sx={{p:1}} alignItems='center' justifyContent='center'>
-                <Typography color={visible=="none"?'secondary.dark':'secondary.light'} variant='h4' align ='center'>{title}</Typography>
+                <Typography color={!entered?'secondary.dark':'secondary.light'} variant='h4' align ='center'>{title}</Typography>
             </Grid>
             <Grid container item alignItems='flex-start' justifyContent='center' xs={9} display={imgVisible}>
                 <Box alignItems='center' justifyContent='center' display='flex'>

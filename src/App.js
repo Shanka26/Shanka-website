@@ -322,7 +322,7 @@ let aboutStyle= {
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
             <Project title="SEO Certificate" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
-             tags={['SEO']} link='http://academy.hubspot.com/certification'
+             tags={['SEO']} link='null'
               description='Obtained search engine optimization certification through hubspot academy'/>
             </Box>
             </Grid>
