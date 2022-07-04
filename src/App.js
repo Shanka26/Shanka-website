@@ -316,7 +316,7 @@ let aboutStyle= {
               description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and see them when on break."/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://dcore.netlify.app/"
+              <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://www.dcorepaperie.com/"
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
