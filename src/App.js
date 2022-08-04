@@ -10,6 +10,7 @@ import { send } from '@emailjs/browser';
 import Slide from '@mui/material/Slide';
 import pomonotoScreen from './res/pomonotoMock.webp'
 import dcoreScreen from './res/dcoreMock.webp'
+import cubeplexScreen from './res/cube_plex.jpg'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -320,7 +321,7 @@ let aboutStyle= {
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title="Cubeplex" image={dcoreScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
+              <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
               description='E-Commerce website for The Cubeplex'/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
