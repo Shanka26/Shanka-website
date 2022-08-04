@@ -26,13 +26,14 @@ function App() {
   let aboutRef = useRef()
   let projectsRef = useRef()
   let contactRef = useRef()
+  let infoRef= useRef()
   let [myView , setMyView] = useState(false)
   let [jobView , setJobView] = useState(false)
   let [about , setAbout] = useState("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
   let [about_2 , setAbout_2] = useState("My aim in life is to grow everyday and enjoy myself in the process.")
   let [about2 , setAbout2] = useState("I design and develop responsive web applications")
   let [about2_2 , setAbout2_2] = useState("I love learning about new technologies and improving my craft")
-  let infoRef= useRef()
+  
 
   let[quote1 , setQuote1] = useState("“ Ten out of ten people die, so don\'t take life too seriously. ”")
   let[author1 , setAuthor1] = useState("~ Henry Winkler")
@@ -49,9 +50,28 @@ function App() {
   let[emailMessage,setEmailMessage]=useState("")
   let[emailError,setEmailError]=useState("none")
 
+  let[projectInView,setProjectInView]=useState("none")
 
 
+  const [offset, setOffset] = useState(0);
 
+  useEffect(() => {
+      const onScroll = () => setOffset(window.pageYOffset);
+      // clean up code
+      window.removeEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  if(projectsRef.current){
+    if(offset+100>projectsRef.current.offsetTop&&offset+100<(projectsRef.current.offsetTop+projectsRef.current.offsetHeight)){
+      !projectInView&&setProjectInView(true)
+    }
+    else{
+      projectInView&&setProjectInView(false)
+    }
+  }
+  console.log(projectInView)
   const scrollBar = {
     '&::-webkit-scrollbar': {
       width: '0.4em'
@@ -312,18 +332,29 @@ let aboutStyle= {
         <Typography variant="h2" align='center' color='primary.mid' sx={{marginBottom:8}}>Projects</Typography>
         <Box >
           <Grid container justifyContent='center' spacing={0}>
+
+          <Slide direction="right" in={projectInView} container={projectsRef.current}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
               <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
               description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and see them when on break."/>
             </Grid>
+          </Slide>
+
+          <Slide direction="down" in={projectInView} container={projectsRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://www.dcorepaperie.com/"
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
+          </Slide>
+
+          <Slide direction="left" in={projectInView} container={projectsRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
               description='E-Commerce website for The Cubeplex'/>
             </Grid>
+          </Slide>
+
+          <Slide direction="left" in={projectInView} container={projectsRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
             <Project title="SEO Certificate" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
@@ -331,6 +362,7 @@ let aboutStyle= {
               description='Obtained search engine optimization certification through hubspot academy'/>
             </Box>
             </Grid>
+          </Slide>
             
 
             
