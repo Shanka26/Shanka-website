@@ -36,7 +36,7 @@ function App() {
   let[quote1 , setQuote1] = useState("“ Ten out of ten people die, so don\'t take life too seriously. ”")
   let[author1 , setAuthor1] = useState("~ Henry Winkler")
   let[quote2 , setQuote2] = useState("“ I used to be an adventurer like you. Then I took an arrow in the knee. ”")
-  let[author2 , setAuthor2] = useState("~ Whiterun guard")
+  let[author2 , setAuthor2] = useState("~ Guard")
   let[quote3 , setQuote3] = useState("“ Programming isn\'t about what you know, it\'s about what you can figure out. ”")
   let[author3 , setAuthor3] = useState("~ Chris Pine")
   let[quote4 , setQuote4] = useState("“A true master is an eternal student.”")
@@ -318,6 +318,10 @@ let aboutStyle= {
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://www.dcorepaperie.com/"
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
+            </Grid>
+            <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
+              <Project title="Cubeplex" image={dcoreScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
+              description='E-Commerce website for The Cubeplex'/>
             </Grid>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
