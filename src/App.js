@@ -10,7 +10,7 @@ import { send } from '@emailjs/browser';
 import Slide from '@mui/material/Slide';
 import pomonotoScreen from './res/pomonotoMock.webp'
 import dcoreScreen from './res/dcoreMock.webp'
-import cubeplexScreen from './res/cube_plex.jpg'
+import cubeplexScreen from './res/cubeplex_mock.jpg'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
