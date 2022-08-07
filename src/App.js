@@ -27,6 +27,7 @@ function App() {
   let projectsRef = useRef()
   let contactRef = useRef()
   let infoRef= useRef()
+  let slideRef= useRef()
   let [myView , setMyView] = useState(false)
   let [jobView , setJobView] = useState(false)
   let [about , setAbout] = useState("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
@@ -327,34 +328,34 @@ let aboutStyle= {
 
 
       
-      <Box ref = {projectsRef}
+      <Box ref = {projectsRef} 
       sx={{p:4, pt:{xs:2,sm:4,md:8,lg:12},pb:12, height:1 ,}}>
         <Typography variant="h2" align='center' color='primary.mid' sx={{marginBottom:8}}>Projects</Typography>
-        <Box >
-          <Grid container justifyContent='center' spacing={0}>
+        <Box ref = {slideRef}  overflow='hidden' >
+          <Grid container justifyContent='center' spacing={2}>
 
-          <Slide direction="right" in={projectInView} container={projectsRef.current}>
+          <Slide direction="right" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
               <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
               description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and see them when on break."/>
             </Grid>
           </Slide>
 
-          <Slide direction="down" in={projectInView} container={projectsRef.current}>
+          <Slide direction="down" in={projectInView}  container={slideRef.current} >
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://www.dcorepaperie.com/"
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
           </Slide>
 
-          <Slide direction="left" in={projectInView} container={projectsRef.current}>
+          <Slide direction="left" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
               description='E-Commerce website for The Cubeplex'/>
             </Grid>
           </Slide>
 
-          <Slide direction="left" in={projectInView} container={projectsRef.current}>
+          <Slide direction="up" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
             <Project title="SEO Certificate" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
