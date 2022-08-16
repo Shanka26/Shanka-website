@@ -11,6 +11,7 @@ import Slide from '@mui/material/Slide';
 import pomonotoScreen from './res/pomonotoMock.webp'
 import dcoreScreen from './res/dcoreMock.webp'
 import cubeplexScreen from './res/cubeplex_mock.jpg'
+import guidedlyScreen from './res/guidedlyMock.jpg'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -332,7 +333,7 @@ let aboutStyle= {
       sx={{p:4, pt:{xs:2,sm:4,md:8,lg:12},pb:12, height:1 ,}}>
         <Typography variant="h2" align='center' color='primary.mid' sx={{marginBottom:8}}>Projects</Typography>
         <Box ref = {slideRef}  overflow='hidden' >
-          <Grid container justifyContent='center' spacing={2}>
+          <Grid container justifyContent='center' spacing={4}>
 
           <Slide direction="right" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
@@ -355,10 +356,20 @@ let aboutStyle= {
             </Grid>
           </Slide>
 
-          <Slide direction="up" in={projectInView} container={slideRef.current}>
+          <Slide direction="right" in={projectInView} container={slideRef.current}>
+            <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
+            
+            <Project title="Guidedly" image={guidedlyScreen}
+             tags={['React','design']} link='https://guidedly.netlify.app/'
+              description='Guidedly is an online meditation timer that uses speech to toex to creat a guided meditation with your own mantras.'/>
+            
+            </Grid>
+          </Slide>
+
+          <Slide direction="left" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
-            <Project title="SEO Certificate" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
+            <Project title="SEO Certification" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
              tags={['SEO']} link='null'
               description='Obtained search engine optimization certification through hubspot academy'/>
             </Box>
