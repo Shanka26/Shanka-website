@@ -349,14 +349,14 @@ let aboutStyle= {
             </Grid>
           </Slide>
 
-          <Slide direction="left" in={projectInView} container={slideRef.current}>
+          <Slide direction="up" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
               description='E-Commerce website for The Cubeplex'/>
             </Grid>
           </Slide>
 
-          <Slide direction="right" in={projectInView} container={slideRef.current}>
+          <Slide direction="left" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             
             <Project title="Guidedly" image={guidedlyScreen}
