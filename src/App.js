@@ -369,7 +369,7 @@ let aboutStyle= {
           <Slide direction="left" in={projectInView} container={slideRef.current}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
-            <Project title="SEO Certification" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/b249aa4adede4ddf848d9d3d86642ab7.png'}
+            <Project title="SEO Certification" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/2af6b39782024053b5f42e3032f5dea6.png'}
              tags={['SEO']} link='null'
               description='Obtained search engine optimization certification through hubspot academy'/>
             </Box>
@@ -378,8 +378,9 @@ let aboutStyle= {
             
 
             
-          </Grid>
-         
+
+
+
         </Box>
         
     
