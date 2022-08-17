@@ -375,6 +375,7 @@ let aboutStyle= {
             </Box>
             </Grid>
           </Slide>
+          </Grid>
             
 
             
