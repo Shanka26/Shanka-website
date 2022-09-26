@@ -73,7 +73,7 @@ function App() {
       projectInView&&setProjectInView(false)
     }
   }
-  console.log(projectInView)
+ 
   const scrollBar = {
     '&::-webkit-scrollbar': {
       width: '0.4em'

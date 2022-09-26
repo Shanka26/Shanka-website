@@ -38,7 +38,7 @@ const menuStyle = {
   right:'0%',
   width: {xs:'100%'},
   height: '100%',
-  background:"linear-gradient(to bottom, rgba(0,122,121,1),rgba(0,122,121,0.9),rgba(0,122,121,0.0))",
+  background:"linear-gradient(to bottom, rgba(0,82,82,1),rgba(0,82,82,0.9),rgba(0,82,82,0.0))",
   
   justifyContent:'center',
   alignItems:'flex-start',
@@ -74,15 +74,19 @@ const Header = ({about,projects,contact}) => {
     if (!ref.current) return;
     ref.current.scrollIntoView({ behavior: "smooth" });
     console.log(!ref.current)
-    setMenuOpen(true)
-    setMenuOpen(false)
+   
     
   }
 
 
   let scrol = (ref)=> {
-    scrollTo(ref)
     setMenuOpen(false)
+    
+    setTimeout(()=>{
+      scrollTo(ref)
+      
+    },50)
+    
   }
   return (
     
