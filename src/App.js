@@ -97,7 +97,7 @@ function App() {
     color:'primary.main',
     fontSize:{xs:28,md:36,lg:52},
     '&:hover':{
-      color:'primary.mid', 
+      color:'primary.light', 
       // fontSize:{xs:36,md:44},
     }
     
