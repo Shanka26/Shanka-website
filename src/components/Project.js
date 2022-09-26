@@ -12,21 +12,7 @@ import { useTheme } from '@mui/material/styles';
 
 
 
-const style = {
-    
-    width:{xs:300,md:380},
-    height:{xs:340,md:420},
-    margin:2,
-    boxShadow:4,
-    borderRadius:2,
-    backgroundColor:'secondary.main',
-    '&:hover':{
-        backgroundColor:'primary.mid',
-        // backgroundColor: rgba(0,0,0,0.25),
-        // backgroundImage: `url()`, 
-        boxShadow:8,
-    }
-};
+
 
 const Project = ({title,description,image,tags,link}) => {
     const size_theme = useTheme()
@@ -35,17 +21,28 @@ const Project = ({title,description,image,tags,link}) => {
     let [visible,setVisible] = useState("none")
     let [imgVisible,setImgVisible] = useState("flex")
     let [entered,setEntered] = useState(false)
+
+    const style = {
+    
+        width:{xs:300,md:380},
+        height:{xs:340,md:420},
+        margin:2,
+        boxShadow:entered?8:0,
+        borderRadius:2,
+        backgroundColor:entered?'primary.mid':'secondary.dark',
+      
+    };
     
 
   return (
-    <Paper sx={style} onMouseEnter={()=>{setEntered(true);if(link!=='null'){setVisible("flex");setImgVisible("none")}}}
+    <Paper sx={style} onMouseEnter={()=>{if(link!=='null'){setEntered(true);setVisible("flex");setImgVisible("none")}}}
      onMouseLeave={()=>{setVisible("none");setImgVisible("flex");setEntered(false)}}>
         
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column'  alignItems='center' height={1}>
         {/* <Image src={pomonotoScreen}/> */}
-            <Grid container item xs={1} sx={{p:1}} alignItems='center' justifyContent='center'>
-                <Typography color={!entered?'secondary.dark':'secondary.light'} variant='h4' align ='center'>{title}</Typography>
+            <Grid container item xs={1} sx={{p:1,pb:entered?1:4}} alignItems='center' justifyContent='center'>
+                <Typography color={!entered?'secondary.light':'secondary.light'} variant='h4' align ='center'>{title}</Typography>
             </Grid>
             <Grid container item alignItems='flex-start' justifyContent='center' xs={9} display={imgVisible}>
                 <Box alignItems='center' justifyContent='center' display='flex'>
