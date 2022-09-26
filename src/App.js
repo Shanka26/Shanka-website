@@ -12,6 +12,7 @@ import pomonotoScreen from './res/pomonotoMock.webp'
 import dcoreScreen from './res/dcoreMock.webp'
 import cubeplexScreen from './res/cubeplex_mock.jpg'
 import guidedlyScreen from './res/guidedlyMock.jpg'
+import seoCert from './res/hubspotCert.png'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -369,7 +370,7 @@ let aboutStyle= {
           <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}} style={{ transitionDelay:100}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
-            <Project title="SEO Certification" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/2af6b39782024053b5f42e3032f5dea6.png'}
+            <Project title="SEO Certification" image={seoCert}
              tags={['SEO']} link='null'
               description='Obtained search engine optimization certification through hubspot academy'/>
             </Box>
