@@ -90,7 +90,7 @@ const Header = ({about,projects,contact}) => {
   }
   return (
     
-   <AppBar position="sticky" sx={{backgroundColor:'rgba(0,0,0,0.5)',boxShadow:4,margin:0, padding:{xs:0,md:0}}}>
+   <AppBar position="sticky" sx={{backgroundColor:'rgba(30,30,30,1)',boxShadow:4,margin:0, padding:{xs:0,md:0}}}>
        <Toolbar sx={{display:'flex', margin:0,paddingX:2}}>
 
          <Grid container>
