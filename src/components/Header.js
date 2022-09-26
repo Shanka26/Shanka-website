@@ -101,9 +101,9 @@ const Header = ({about,projects,contact}) => {
 
            <Grid item container xs={9} justifyContent="flex-end" >
            <Stack direction='row' sx={{flexDirection:'row',display:{xs:'none',lg:'flex'}}}>
-              <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About</Button>
-              <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>Work</Button>
-              <Button sx={buttonStyle} onClick={()=>{scrol(contact)}}>Contact</Button>
+              <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About Me</Button>
+              <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>My Work</Button>
+              <Button sx={buttonStyle} onClick={()=>{scrol(contact)}}>Get in touch</Button>
             </Stack>
 
             <IconButton sx={{display:{xs:'flex',lg:'none'}}} onClick={()=>{setMenuOpen(!menuOpen)}}>

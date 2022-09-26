@@ -5,16 +5,16 @@ import {  AppBar,Typography, Toolbar, Stack,Button, Grid, Box } from '@mui/mater
 
 let textStyle={
   color:'secondary.light',
-  fontSize:{xs:14,sm:18,md:20,lg:22}
+  fontSize:{xs:13,sm:18,md:18,lg:20}
 }
 let emailStyle={
   color:'secondary.light',
-  fontSize:{xs:14,sm:18,md:20,lg:26}
+  fontSize:{xs:14,sm:14,md:18,lg:24}
 }
 const Footer = () => {
   return (
     <AppBar position="sticky" sx={{background:"linear-gradient(to bottom,#333333,#006666)",
-    boxShadow:0,paddingX:{xs:1},paddingTop:{xs:10,md:16},paddingBottom:{xs:2,md:4}}}>
+    boxShadow:1,paddingX:{xs:1},paddingTop:{xs:10,md:16},paddingBottom:{xs:2,md:4}}}>
        <Toolbar sx={{display:'flex'}}>
 
          <Box width={1} >

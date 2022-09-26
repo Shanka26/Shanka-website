@@ -399,8 +399,8 @@ let aboutStyle= {
         
           <Box mb={2} alignItems='center' sx={{px:{xs:2,md:4}}}>
             <Typography color='primary.mid' mb={2} variant='h3'  align='center'>Get In Touch</Typography>
-            <Typography color='secondary.light' variant={lg_up?'h4':'h6'} align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
-            <Typography color='secondary.light' variant={lg_up?'h4':'h6'} align='center'>Feel free to send me a message or follow me on social media. </Typography>
+            <Typography color='secondary.light' sx={quoteStyle} align='center'>want to contact me about work, ask a question or just keep up with what I'm working on?</Typography>
+            <Typography color='secondary.light' sx={quoteStyle} align='center'>Feel free to send me a message or follow me on social media. </Typography>
 
             
           </Box>
