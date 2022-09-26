@@ -335,7 +335,7 @@ let aboutStyle= {
         <Box ref = {slideRef}  overflow='hidden' >
           <Grid container justifyContent='center' spacing={4}>
 
-          <Slide direction="up" in={projectInView} container={slideRef.current}timeout={{enter:800,exit:0}}>
+          <Slide direction="up" in={projectInView} container={slideRef.current}timeout={{enter:800,exit:0}} style={{ transitionDelay:100}}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
               <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
               description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and see them when on break."/>
