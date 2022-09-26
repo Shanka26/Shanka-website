@@ -66,7 +66,7 @@ function App() {
   }, []);
 
   if(projectsRef.current){
-    if(offset+200>projectsRef.current.offsetTop&&offset+100<(projectsRef.current.offsetTop+projectsRef.current.offsetHeight)){
+    if(offset+500>projectsRef.current.offsetTop&&offset+100<(projectsRef.current.offsetTop+projectsRef.current.offsetHeight)){
       !projectInView&&setProjectInView(true)
     }
     else{

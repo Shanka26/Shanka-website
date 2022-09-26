@@ -35,9 +35,10 @@ const menuHead={
 
 const menuStyle = {
   position: 'absolute',
+  right:'0%',
   width: {xs:'100%'},
-  height: '80%',
-  backgroundColor: 'primary.main',
+  height: '100%',
+  background:"linear-gradient(to bottom, rgba(0,122,121,1),rgba(0,122,121,0.9),rgba(0,122,121,0.0))",
   
   justifyContent:'center',
   alignItems:'flex-start',
@@ -69,10 +70,20 @@ const Header = ({about,projects,contact}) => {
   }
 
   let scrollTo = (ref)=> {
+   
     if (!ref.current) return;
     ref.current.scrollIntoView({ behavior: "smooth" });
+    console.log(!ref.current)
+    setMenuOpen(true)
+    setMenuOpen(false)
+    
   }
 
+
+  let scrol = (ref)=> {
+    scrollTo(ref)
+    setMenuOpen(false)
+  }
   return (
     
    <AppBar position="sticky" sx={{backgroundColor:'rgba(0,0,0,0.5)',boxShadow:4,margin:0, padding:{xs:0,md:0}}}>
@@ -86,9 +97,9 @@ const Header = ({about,projects,contact}) => {
 
            <Grid item container xs={9} justifyContent="flex-end" >
            <Stack direction='row' sx={{flexDirection:'row',display:{xs:'none',lg:'flex'}}}>
-              <Button sx={buttonStyle}   onClick={()=>{scrollTo(about)}}>About</Button>
+              <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About</Button>
               <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>Work</Button>
-              <Button sx={buttonStyle} onClick={()=>{scrollTo(contact)}}>Contact</Button>
+              <Button sx={buttonStyle} onClick={()=>{scrol(contact)}}>Contact</Button>
             </Stack>
 
             <IconButton sx={{display:{xs:'flex',lg:'none'}}} onClick={()=>{setMenuOpen(!menuOpen)}}>
@@ -104,27 +115,28 @@ const Header = ({about,projects,contact}) => {
        
        </Toolbar>
        <Modal
+       
         open={menuOpen}
         onClose={()=>setMenuOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
 
       >
-        <Slide direction="down" in={menuOpen} timeout={{enter:500,exit:0}}  >
+        <Slide direction="down" in={menuOpen} timeout={{enter:400,exit:300}}  >
         <Box flexDirection='column' backgroundColor= 'primary.light' sx={menuStyle}>
           <Box display='flex' justifyContent="flex-end" alignItems='flex-start' height='20vh'>
           <IconButton onClick={()=>{setMenuOpen(false)}} sx={{margin:1}}>
-            <CloseIcon sx={{fontSize:28,color:'primary.light'}}/>
+            <CloseIcon sx={{fontSize:28,color:'white'}}/>
           </IconButton>
         </Box>
         <Box >
           <Stack 
           // sx={{position: 'absolute',top:'10%'}}
           >
-          <Button  sx={{...menuHead}} onClick={()=>{scrollTo(about)}}>Home</Button>
-            <Button sx={{...menuHead}} onClick={()=>{scrollTo(projects)}}>About</Button>
+          <Button  sx={{...menuHead}} onClick={()=>{scrollTo(about)}}>About Me</Button>
+            <Button sx={{...menuHead}} onClick={()=>{ scrollTo(projects)}}>Work</Button>
             
-            <Button sx={{...menuHead}}  onClick={()=>{scrollTo(contact)}}>Shop</Button>
+            <Button sx={{...menuHead}}  onClick={()=>{scrol(contact)}}>Get in Touch</Button>
             
           </Stack>
         </Box>
