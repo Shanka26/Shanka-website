@@ -335,28 +335,28 @@ let aboutStyle= {
         <Box ref = {slideRef}  overflow='hidden' >
           <Grid container justifyContent='center' spacing={4}>
 
-          <Slide direction="right" in={projectInView} container={slideRef.current}>
+          <Slide direction="up" in={projectInView} container={slideRef.current}timeout={{enter:800,exit:0}}>
             <Grid container item xs={12} md={6} lg={4}  justifyContent='center'>
               <Project title='Pomonoto' image={pomonotoScreen} tags={['React','Django', 'User Authentication']} link="https://pomonoto.netlify.app/"
               description="Pomodoro timer with a helpful twist. During work phases, users can jot down disappearing notes and see them when on break."/>
             </Grid>
           </Slide>
 
-          <Slide direction="down" in={projectInView}  container={slideRef.current} >
+          <Slide direction="up" in={projectInView}  container={slideRef.current} timeout={{enter:800,exit:0}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="D'Core Paperie" image={dcoreScreen} tags={['React','Design']} link="https://www.dcorepaperie.com/"
               description='Website for local paperie business showcasing their services and all other pertinent information'/>
             </Grid>
           </Slide>
 
-          <Slide direction="up" in={projectInView} container={slideRef.current}>
+          <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
               description='E-Commerce website for The Cubeplex'/>
             </Grid>
           </Slide>
 
-          <Slide direction="left" in={projectInView} container={slideRef.current}>
+          <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             
             <Project title="Guidedly" image={guidedlyScreen}
@@ -366,7 +366,7 @@ let aboutStyle= {
             </Grid>
           </Slide>
 
-          <Slide direction="left" in={projectInView} container={slideRef.current}>
+          <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
             <Box class='academy-badge' width='50px'>
             <Project title="SEO Certification" image={'https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/2af6b39782024053b5f42e3032f5dea6.png'}
@@ -407,6 +407,7 @@ let aboutStyle= {
           <Stack direction='row' gap={2} justifyContent='center'>
             <Fab sx={fabStyle} size='medium' component={Link} href='https://twitter.com/Shanka26/' target="_blank" rel="noopener"><TwitterIcon/></Fab>
             <Fab sx={fabStyle} size='medium'  component={Link} href='https://www.reddit.com/user/MinisterShanka' target="_blank" rel="noopener"><RedditIcon/></Fab>
+            <Fab sx={fabStyle} size='medium'  component={Link} href='https://github.com/Shanka26' target="_blank" rel="noopener"><GitHubIcon/></Fab>
             {/* <Fab sx={fabStyle} size='medium' component={Link} href='https://github.com/Shanka26' target="_blank" rel="noopener"><GitHubIcon/></Fab> */}
             </Stack>
 
