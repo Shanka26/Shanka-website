@@ -131,10 +131,10 @@ function App() {
   input:{color: '#fff'}
 }
 let quoteStyle= {
-  fontSize:{xs:18,sm:20,md:22,lg:28}
+  fontSize:{xs:16,sm:18,md:20,lg:26}
 }
 let aboutStyle= {
-  fontSize:{xs:22,sm:24,md:26,lg:32}
+  fontSize:{xs:20,sm:22,md:24,lg:30}
 }
 
 
