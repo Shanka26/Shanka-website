@@ -331,7 +331,7 @@ let aboutStyle= {
       
       <Box ref = {projectsRef} 
       sx={{p:4, pt:{xs:2,sm:4,md:8,lg:12},pb:12, height:1 ,}}>
-        <Typography variant="h2" align='center' color='primary.mid' sx={{marginBottom:8}}>Projects</Typography>
+        <Typography variant="h2" align='center' color='primary.mid' sx={{marginBottom:8}}>Work</Typography>
         <Box ref = {slideRef}  overflow='hidden' >
           <Grid container justifyContent='center' spacing={4}>
 
