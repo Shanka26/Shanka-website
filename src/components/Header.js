@@ -23,7 +23,7 @@ const buttonStyle = {
 }
 
 const menuHead={
-  fontSize:40,
+  fontSize:30,
   color:'white',
   '&:hover':{
     color:'secondary.main',
@@ -36,7 +36,7 @@ const menuHead={
 const menuStyle = {
   position: 'absolute',
   width: {xs:'100%'},
-  height: '60%',
+  height: '80%',
   backgroundColor: 'primary.main',
   
   justifyContent:'center',
@@ -49,7 +49,7 @@ const menuStyle = {
 
 let menuButton={
   color:'primary.mid',
-  fontSize:{xs:24,sm:24,md:24}
+  fontSize:{xs:26}
 }
 
 const headButton={
@@ -110,11 +110,11 @@ const Header = ({about,projects,contact}) => {
         aria-describedby="modal-modal-description"
 
       >
-        <Slide direction="down" in={menuOpen}  >
+        <Slide direction="down" in={menuOpen} timeout={{enter:500,exit:0}}  >
         <Box flexDirection='column' backgroundColor= 'primary.light' sx={menuStyle}>
           <Box display='flex' justifyContent="flex-end" alignItems='flex-start' height='20vh'>
           <IconButton onClick={()=>{setMenuOpen(false)}} sx={{margin:1}}>
-            <CloseIcon sx={{fontSize:24,color:'primary.light'}}/>
+            <CloseIcon sx={{fontSize:28,color:'primary.light'}}/>
           </IconButton>
         </Box>
         <Box >
