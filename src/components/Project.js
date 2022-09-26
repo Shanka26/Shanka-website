@@ -28,6 +28,7 @@ const Project = ({title,description,image,tags,link}) => {
         height:{xs:340,md:420},
         margin:2,
         boxShadow:entered?8:0,
+        display:image?'flex':'none',
         borderRadius:2,
         backgroundColor:entered?'primary.mid':'secondary.dark',
       

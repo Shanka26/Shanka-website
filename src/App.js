@@ -34,7 +34,7 @@ function App() {
   let [about , setAbout] = useState("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
   let [about_2 , setAbout_2] = useState("My aim in life is to grow everyday and enjoy myself in the process.")
   let [about2 , setAbout2] = useState("I design and develop responsive web applications")
-  let [about2_2 , setAbout2_2] = useState("I love learning about new technologies and improving my craft")
+  let [about2_2 , setAbout2_2] = useState("I love learning about new technologies to bring ideas to life.")
   
 
   let[quote1 , setQuote1] = useState("“ Ten out of ten people die, so don\'t take life too seriously. ”")
