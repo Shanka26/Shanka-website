@@ -137,8 +137,8 @@ const Header = ({about,projects,contact}) => {
           <Stack 
           // sx={{position: 'absolute',top:'10%'}}
           >
-          <Button  sx={{...menuHead}} onClick={()=>{scrollTo(about)}}>About Me</Button>
-            <Button sx={{...menuHead}} onClick={()=>{ scrollTo(projects)}}>Work</Button>
+          <Button  sx={{...menuHead}} onClick={()=>{scrol(about)}}>About Me</Button>
+            <Button sx={{...menuHead}} onClick={()=>{ scrol(projects)}}>Work</Button>
             
             <Button sx={{...menuHead}}  onClick={()=>{scrol(contact)}}>Get in Touch</Button>
             
