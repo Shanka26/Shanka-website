@@ -68,7 +68,7 @@ function App() {
   }, []);
 
   if(projectsRef.current){
-    if(offset+500>projectsRef.current.offsetTop&&offset+100<(projectsRef.current.offsetTop+projectsRef.current.offsetHeight)){
+    if(offset+600>projectsRef.current.offsetTop&&offset+100<(projectsRef.current.offsetTop+projectsRef.current.offsetHeight)){
       !projectInView&&setProjectInView(true)
     }
     else{
@@ -363,7 +363,7 @@ let aboutStyle= {
             
             <Project title="Guidedly" image={guidedlyScreen}
              tags={['React','design']} link='https://guidedly.netlify.app/'
-              description='Guidedly is an online meditation timer that uses speech to toex to creat a guided meditation with your own mantras.'/>
+              description='Guidedly is an online meditation timer that uses speech to to text to create a guided meditation with your own mantras.'/>
             
             </Grid>
           </Slide>
