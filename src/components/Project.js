@@ -28,7 +28,7 @@ const Project = ({title,description,image,tags,link}) => {
         height:{xs:340,md:420},
         margin:2,
         boxShadow:entered?8:0,
-        display:image?'flex':'flex',
+        display:image?'flex':'none',
         borderRadius:2,
         backgroundColor:entered?'primary.mid':'secondary.dark',
       
@@ -37,7 +37,7 @@ const Project = ({title,description,image,tags,link}) => {
 
   return (
     <Paper sx={style} onMouseEnter={()=>{if(link!=='null'){setEntered(true);setVisible("flex");setImgVisible("none")}}}
-     onMouseLeave={()=>{setVisible("none");setImgVisible("flex");setEntered(false)}}>
+     onMouseLeave={()=>{setVisible("none");setImgVisible("flex");setEntered(true)}}>
         
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column'  alignItems='center' height={1}>
