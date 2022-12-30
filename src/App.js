@@ -12,7 +12,8 @@ import pomonotoScreen from './res/pomonotoMock.webp'
 import dcoreScreen from './res/dcoreMock.webp'
 import cubeplexScreen from './res/cubeplex_mock.jpg'
 import guidedlyScreen from './res/guidedlyMock.jpg'
-import seoCert from './res/hubspotCert.png'
+import seoCert from './res/hubspotCertweb.webp'
+import lazyPotScreen from './res/lazypot.webp'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -352,7 +353,7 @@ let aboutStyle= {
 
           <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}} style={{ transitionDelay:100}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
+              <Project title="Cubeplex" image={cubeplexScreen} tags={['React','E-Commerce','Design','Stripe payment']} link="https://www.cubeplex.shop/"
               description='E-Commerce website for The Cubeplex'/>
             </Grid>
           </Slide>
@@ -364,6 +365,13 @@ let aboutStyle= {
              tags={['React','design']} link='https://guidedly.netlify.app/'
               description='Guidedly is an online meditation timer that uses speech to toex to creat a guided meditation with your own mantras.'/>
             
+            </Grid>
+          </Slide>
+
+          <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}} style={{ transitionDelay:100}}>
+            <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
+              <Project title="Lazy Irrigation" image={lazyPotScreen} tags={['Shopify','E-Commerce','Design']} link="https://irrigationpots.myshopify.com/"
+              description='Shopify E-Comerce website for Lazy Irrigation Pots'/>
             </Grid>
           </Slide>
 
