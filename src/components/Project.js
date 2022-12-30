@@ -37,7 +37,7 @@ const Project = ({title,description,image,tags,link}) => {
 
   return (
     <Paper sx={style} onMouseEnter={()=>{if(link!=='null'){setEntered(true);setVisible("flex");setImgVisible("none")}}}
-     onMouseLeave={()=>{setVisible("none");setImgVisible("flex");setEntered(true)}}>
+     onMouseLeave={()=>{setVisible("none");setImgVisible("block");setEntered(false)}}>
         
         {/* <img src={pomonotoScreen}/> */}
         <Grid container direction='column'  alignItems='center' height={1}>
