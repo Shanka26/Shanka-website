@@ -14,6 +14,7 @@ import cubeplexScreen from './res/cubeplex_mock.jpg'
 import guidedlyScreen from './res/guidedlyMock.jpg'
 import seoCert from './res/hubspotCertweb.webp'
 import lazyPotScreen from './res/lazypot.webp'
+import eternallyBondedScreen from './res/eternallyBonded.webp'
 // import styled from "styled-components";
 import { styled } from '@mui/system';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -251,13 +252,13 @@ let aboutStyle= {
           </Grid>
 
           <Grid container item xs={5} alignItems='center' justifyContent='flex-start' sx={{pt:0}} direction='column'  >
-            <Typography color='secondary.light' variant={lg_up?'h2':'h3'} sx={homeStyle}align='center'>
+            <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle}align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' component='h1' onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
-            <Typography color='secondary.light' variant={lg_up?'h2':'h3'} sx={homeStyle} align='center'>
+            <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobView(true);setMyView(false)}} onMouseLeave={()=>{setJobView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
@@ -372,6 +373,13 @@ let aboutStyle= {
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
               <Project title="Lazy Irrigation" image={lazyPotScreen} tags={['Shopify','E-Commerce','Design']} link="https://irrigationpots.myshopify.com/"
               description='Shopify E-Comerce website for Lazy Irrigation Pots'/>
+            </Grid>
+          </Slide>
+
+          <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}} style={{ transitionDelay:100}}>
+            <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
+              <Project title="Eternally Bonded Rings" image={eternallyBondedScreen} tags={['Shopify','E-Commerce','Design']} link="https://eternally-bonded-rings.myshopify.com/"
+              description='Shopify E-Comerce website for matching ring sets'/>
             </Grid>
           </Slide>
 
