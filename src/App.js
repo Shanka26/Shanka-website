@@ -254,7 +254,9 @@ let aboutStyle= {
           <Grid container item xs={5} alignItems='center' justifyContent='flex-start' sx={{pt:0}} direction='column'  >
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle}align='center'>
               Hi, I'm 
-              <Typography  display='inline' variant='inherit' component='h1' onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
+              <Typography  display='inline' variant='inherit' 
+              // component='h1'
+               onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
@@ -378,7 +380,7 @@ let aboutStyle= {
 
           <Slide direction="up" in={projectInView} container={slideRef.current} timeout={{enter:800,exit:0}} style={{ transitionDelay:100}}>
             <Grid container item xs={12} md={6} lg={4} justifyContent='center'>
-              <Project title="Eternally Bonded Rings" image={eternallyBondedScreen} tags={['Shopify','E-Commerce','Design']} link="https://eternally-bonded-rings.myshopify.com/"
+              <Project title="Eternally Bonded" image={eternallyBondedScreen} tags={['Shopify','E-Commerce','Design']} link="https://eternally-bonded-rings.myshopify.com/"
               description='Shopify E-Comerce website for matching ring sets'/>
             </Grid>
           </Slide>
