@@ -96,7 +96,7 @@ const Header = ({about,projects,contact}) => {
          <Grid container>
 
            <Grid container item xs={3}  alignItems='center'>
-              <img width={md_up?64:40} src={shankaLight} onClick={()=>{scrollTo(about)}}/>
+              <img width={md_up?48:40} src={shankaLight} onClick={()=>{scrollTo(about)}}/>
            </Grid>
 
            <Grid item container xs={9} justifyContent="flex-end" >
