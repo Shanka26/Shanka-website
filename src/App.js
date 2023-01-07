@@ -34,6 +34,8 @@ function App() {
   let slideRef= useRef()
   let [myView , setMyView] = useState(false)
   let [jobView , setJobView] = useState(false)
+  let [myViewHover , setMyViewHover] = useState(false)
+  let [jobViewHover , setJobViewHover] = useState(false)
   let [about , setAbout] = useState("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
   let [about_2 , setAbout_2] = useState("My aim in life is to grow everyday and enjoy myself in the process.")
   let [about2 , setAbout2] = useState("I design and develop responsive web applications")
@@ -170,6 +172,16 @@ let aboutStyle= {
     const anchor = document.querySelector(section)
     anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
+
+  let viewChange=()=>{
+    if(myViewHover && !jobViewHover){
+      setJobView(true)
+    }
+    else if(!myViewHover && jobViewHover){
+      setMyView(true)
+    }
+
+  }
   
       // setAbout("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
       // setAbout2("My aim in life is to grow everyday and enjoy myself while doing so.")
@@ -256,13 +268,13 @@ let aboutStyle= {
               Hi, I'm 
               <Typography  display='inline' variant='inherit' 
               // component='h1'
-               onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
+               onMouseEnter={()=>{setMyViewHover(true);viewChange()}} onMouseLeave={()=>{setMyViewHover(false);viewChange()}}
               sx={{pl:1,mb:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
-              <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobView(true);setMyView(false)}} onMouseLeave={()=>{setJobView(false)}}
+              <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobViewHover(true);viewChange()}} onMouseLeave={()=>{setJobViewHover(false);viewChange()}}
               sx={{pl:1,mt:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
