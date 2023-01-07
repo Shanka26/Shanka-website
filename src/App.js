@@ -263,7 +263,7 @@ let aboutStyle= {
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{if(!myView){setJobView(true);setMyView(false)}}} onMouseLeave={()=>{setJobView(false)}}
-              sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
+              sx={{textDecoration: 'underline',pl:1,mt:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
             <Grid container item justifyContent="center" alignItems='flex-start'  xs={3} sx={{pt:2}} ref={aboutRef}>
