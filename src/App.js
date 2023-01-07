@@ -256,13 +256,13 @@ let aboutStyle= {
               Hi, I'm 
               <Typography  display='inline' variant='inherit' 
               // component='h1'
-               onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
+               onMouseEnter={()=>{if(!jobView){setMyView(true);setJobView(false)}}} onMouseLeave={()=>{setMyView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
-              <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobView(true);setMyView(false)}} onMouseLeave={()=>{setJobView(false)}}
+              <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{if(!myView){setJobView(true);setMyView(false)}}} onMouseLeave={()=>{setJobView(false)}}
               sx={{textDecoration: 'underline',pl:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
