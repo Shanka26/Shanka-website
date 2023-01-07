@@ -174,6 +174,8 @@ let aboutStyle= {
   }
 
   let viewChange=()=>{
+    if(!myViewHover){setMyView(false)}
+    if(!myJobHover){setJobView(false)}
     if(myViewHover && !jobViewHover){
       setJobView(true)
     }
