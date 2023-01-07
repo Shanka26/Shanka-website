@@ -175,14 +175,16 @@ let aboutStyle= {
 
 
     useEffect(()=>{
-      if(!myViewHover){setMyView(false)}
-      if(!myJobHover){setJobView(false)}
+      
       if(myViewHover && !jobViewHover){
       setJobView(true)
       }
     else if(!myViewHover && jobViewHover){
       setMyView(true)
     }
+
+    if(!myViewHover){setMyView(false)}
+      if(!myJobHover){setJobView(false)}
     },[jobViewHover,myViewHover])
   
   
