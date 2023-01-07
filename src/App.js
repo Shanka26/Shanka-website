@@ -257,7 +257,7 @@ let aboutStyle= {
               <Typography  display='inline' variant='inherit' 
               // component='h1'
                onMouseEnter={()=>{setMyView(true);setJobView(false)}} onMouseLeave={()=>{setMyView(false)}}
-              sx={{pl:1,...viewStyle}}>Shamarl</Typography>
+              sx={{pl:1,mb:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
