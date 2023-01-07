@@ -173,17 +173,18 @@ let aboutStyle= {
     anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
-  let viewChange=()=>{
-    if(!myViewHover){setMyView(false)}
-    if(!myJobHover){setJobView(false)}
-    if(myViewHover && !jobViewHover){
+
+    useEffect(()=>{
+      if(!myViewHover){setMyView(false)}
+      if(!myJobHover){setJobView(false)}
+      if(myViewHover && !jobViewHover){
       setJobView(true)
-    }
+      }
     else if(!myViewHover && jobViewHover){
       setMyView(true)
     }
-
-  }
+    },[jobViewHover,myViewHover])
+  
   
       // setAbout("I come from the British Virgin Islands but I'm currently studying Computer Science at UCA")
       // setAbout2("My aim in life is to grow everyday and enjoy myself while doing so.")
@@ -270,13 +271,13 @@ let aboutStyle= {
               Hi, I'm 
               <Typography  display='inline' variant='inherit' 
               // component='h1'
-               onMouseEnter={()=>{setMyViewHover(true);viewChange()}} onMouseLeave={()=>{setMyViewHover(false);viewChange()}}
+               onMouseEnter={()=>{setMyViewHover(true)}} onMouseLeave={()=>{setMyViewHover(false)}}
               sx={{pl:1,mb:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
-              <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobViewHover(true);viewChange()}} onMouseLeave={()=>{setJobViewHover(false);viewChange()}}
+              <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobViewHover(true);}} onMouseLeave={()=>{setJobViewHover(false);}}
               sx={{pl:1,mt:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
