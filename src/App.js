@@ -230,7 +230,7 @@ let aboutStyle= {
       
       
       <Box height={'100vh'} justifyContent='center' alignItems='center'>
-        <Grid  height='100%' container  direction='column' sx={{mx:0,px:{xs:4,sm:4,md:8,lg:12},pb:{xs:0}}}>
+        <Grid  height='100%' container direction='column' sx={{mx:0,px:{xs:2,sm:4,md:8,lg:12},pb:{xs:0}}}>
 
           <Grid container item xs={5} justifyContent='space-evenly' sx={{pt:2}}flexDirection='column'>
             

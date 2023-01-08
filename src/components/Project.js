@@ -53,7 +53,7 @@ const Project = ({title,description,image,tags,link}) => {
                 </Box>
                 
             </Grid>
-            <Grid container width={"320px"} item alignItems='center' justifyContent='center' xs={5} sx={{ display:visible,px:{xs:2,md:0}}}>
+            <Grid container width={"340px"} item alignItems='center' justifyContent='center' xs={5} sx={{ display:visible,px:{xs:2,md:0}}}>
                 <Typography variant='body1' color='secondary.light' align ='center' fontSize={{xs:16,md:20}}>{description}</Typography>
             </Grid>
             
