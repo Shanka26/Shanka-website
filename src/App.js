@@ -180,9 +180,9 @@ let aboutStyle= {
       if(myViewHover && !jobViewHover){
       setMyView(true)
       }
-    else if(!myViewHover && jobViewHover){
-      setJobView(true)
-    }
+    // else if(!myViewHover && jobViewHover){
+    //   setJobView(true)
+    // }
 
     if(!myViewHover){setMyView(false)}
       if(!myJobHover){setJobView(false)}
