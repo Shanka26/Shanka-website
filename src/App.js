@@ -26,6 +26,7 @@ function App() {
 
   const size_theme = useTheme()
   const lg_up = useMediaQuery(size_theme.breakpoints.up('lg'));
+  const xs_up = useMediaQuery(size_theme.breakpoints.up('xs'));
 
   let aboutRef = useRef()
   let projectsRef = useRef()
@@ -272,17 +273,20 @@ let aboutStyle= {
           <Grid container item xs={5} alignItems='center' justifyContent='flex-start' sx={{pt:0}} direction='column'  >
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle}align='center'>
               Hi, I'm 
-              <Typography  display='inline' variant='inherit' 
+              <Typography  display={xs_up?'inline':'block'} variant='inherit' 
               // component='h1'
                onMouseEnter={()=>{setMyViewHover(true)}} onMouseLeave={()=>{setMyViewHover(false)}}
               sx={{pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
+          
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobViewHover(true);}} onMouseLeave={()=>{setJobViewHover(false);}}
               sx={{pl:1,...viewStyle}}>web developer</Typography>
             </Typography>
+          
+
 
             <Grid container item justifyContent="center" alignItems='flex-start'  xs={3} sx={{pt:2}} ref={aboutRef}>
                 <Box alignItems="flex-start">
