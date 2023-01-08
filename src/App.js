@@ -273,7 +273,7 @@ let aboutStyle= {
           <Grid container item xs={5} alignItems='center' justifyContent='flex-start' sx={{pt:0}} direction='column'  >
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle}align='center'>
               Hi, I'm 
-              <Typography  display={xs_up?'inline':'block'} variant='inherit' 
+              <Typography  display='inline' variant='inherit' 
               // component='h1'
                onMouseEnter={()=>{setMyViewHover(true)}} onMouseLeave={()=>{setMyViewHover(false)}}
               sx={{pl:1,...viewStyle}}>Shamarl</Typography>
