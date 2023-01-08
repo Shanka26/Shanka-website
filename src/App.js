@@ -178,13 +178,13 @@ let aboutStyle= {
       console.log("my: "+myViewHover+"job: "+jobViewHover)
       
       if(myViewHover && !jobViewHover){
-      setMyView(true)
+        setMyView(true)
       }
     // else if(!myViewHover && jobViewHover){
     //   setJobView(true)
     // }
 
-    if(!myViewHover){setMyView(false)}
+      if(!myViewHover){setMyView(false)}
       if(!myJobHover){setJobView(false)}
     },[jobViewHover,myViewHover])
   
