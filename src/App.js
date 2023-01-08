@@ -275,13 +275,13 @@ let aboutStyle= {
               <Typography  display='inline' variant='inherit' 
               // component='h1'
                onMouseEnter={()=>{setMyViewHover(true)}} onMouseLeave={()=>{setMyViewHover(false)}}
-              sx={{pl:1,mb:1,...viewStyle}}>Shamarl</Typography>
+              sx={{pl:1,...viewStyle}}>Shamarl</Typography>
             </Typography>
 
             <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobViewHover(true);}} onMouseLeave={()=>{setJobViewHover(false);}}
-              sx={{pl:1,mt:1,...viewStyle}}>web developer</Typography>
+              sx={{pl:1,...viewStyle}}>web developer</Typography>
             </Typography>
 
             <Grid container item justifyContent="center" alignItems='flex-start'  xs={3} sx={{pt:2}} ref={aboutRef}>

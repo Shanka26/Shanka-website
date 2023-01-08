@@ -24,8 +24,8 @@ const Project = ({title,description,image,tags,link}) => {
 
     const style = {
     
-        width:{xs:300,md:380},
-        height:{xs:340,md:420},
+        width:{xs:352,md:380},
+        height:{xs:400,md:420},
         margin:2,
         boxShadow:entered?8:0,
         display:image?'flex':'none',
