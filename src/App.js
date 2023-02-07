@@ -256,22 +256,22 @@ let aboutStyle= {
             <Box>
                 <Slide direction={"left"} in={myView} container={aboutRef.current} unmountOnExit  timeout={{enter:600,exit:0}}>
                   <Box >
-                    <Typography color='secondary.light' variant='h5' align='right' sx={quoteStyle}>{quote2}</Typography>
-                    <Typography color='primary.mid' variant='h5' align='right' sx={quoteStyle}>{author2}</Typography>
+                    <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote2}</Typography>
+                    <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author2}</Typography>
                   </Box>
                 </Slide>
 
                 <Slide direction={"left"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:600,exit:0}}>
                   <Box >
-                    <Typography color='secondary.light' variant='h5' align='right' sx={quoteStyle}>{quote4}</Typography>
-                    <Typography color='primary.mid' variant='h5' align='right' sx={quoteStyle}>{author4}</Typography>
+                    <Typography color='secondary.light' variant='h6' align='right' sx={quoteStyle}>{quote4}</Typography>
+                    <Typography color='primary.mid' variant='h6' align='right' sx={quoteStyle}>{author4}</Typography>
                   </Box>
                 </Slide>
             </Box>
           </Grid>
 
           <Grid container item xs={5} alignItems='center' justifyContent='flex-start' sx={{pt:0}} direction='column'  >
-            <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle}align='center'>
+            <Typography color='secondary.light' variant={lg_up?'h5':'h5'} sx={homeStyle}align='center'>
               Hi, I'm 
               <Typography  display='inline' variant='inherit' 
               // component='h1'
@@ -280,7 +280,7 @@ let aboutStyle= {
             </Typography>
 
           
-            <Typography color='secondary.light' variant={lg_up?'h3':'h4'} sx={homeStyle} align='center'>
+            <Typography color='secondary.light' variant={lg_up?'h5':'h5'} sx={homeStyle} align='center'>
               I'm a full-stack
               <Typography display='inline'  variant='inherit' component='h1' onMouseEnter={()=>{setJobViewHover(true);}} onMouseLeave={()=>{setJobViewHover(false);}}
               sx={{pl:1,...viewStyle}}>web developer</Typography>
@@ -293,14 +293,14 @@ let aboutStyle= {
                   <Slide direction={"up"} in={jobView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
                       {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about2}</Typography> */}
-                      <Typography color='secondary.light'  variant={lg_up?'h4':'h5'} align='center' sx={quoteStyle} >{about2_2}</Typography>
+                      <Typography color='secondary.light'  variant={lg_up?'h5':'h5'} align='center' sx={quoteStyle} >{about2_2}</Typography>
                     </Box>
                   </Slide>
 
                   <Slide direction={"up"} in={myView} container={aboutRef.current} unmountOnExit timeout={{enter:800,exit:0}}>
                     <Box alignItems="center" >
                       {/* <Typography color='secondary.light' variant='h5' align='center' sx={quoteStyle} >{about}</Typography> */}
-                      <Typography color='secondary.light'  variant={lg_up?'h4':'h5'} align='center' sx={quoteStyle} >{about_2}</Typography>
+                      <Typography color='secondary.light'  variant={lg_up?'h5':'h5'} align='center' sx={quoteStyle} >{about_2}</Typography>
                     </Box>
                   </Slide>
                 </Box>
