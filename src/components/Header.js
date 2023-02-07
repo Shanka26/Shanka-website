@@ -54,12 +54,12 @@ let menuButton={
   fontSize:{xs:26}
 }
 
-const headButton={
-  fontSize:20,
-  color:'primary.light',
+// const headButton={
+//   fontSize:20,
+//   color:'primary.light',
   
-  // fontWeight:700,
-}
+//   // fontWeight:700,
+// }
 const Header = ({about,projects,contact}) => {
   let nav = useNavigate()
   let [menuOpen,setMenuOpen]=useState(false)
