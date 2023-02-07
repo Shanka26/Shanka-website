@@ -1,5 +1,5 @@
 import { Chip, Grid, Paper, Typography, Stack, Button, Box } from '@mui/material'
-// import Link from 'react-router-dom'
+import Link from 'react-router-dom'
 import React,{useState} from 'react'
 import pomonotoScreen from '../res/pomonotoScreen2.webp'
 import Image from 'mui-image'
