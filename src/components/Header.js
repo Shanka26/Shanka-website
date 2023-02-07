@@ -1,5 +1,5 @@
 import React, {useRef, useState}  from 'react'
-import { useNavigate,useHistory } from "react-router-dom";
+// import { useNavigate,useHistory } from "react-router-dom";
 import {  AppBar,Typography, Toolbar, Stack,Button, Grid,IconButton,Box, Modal, Slide } from '@mui/material'
 import shankaLight from '../res/shanka-logo2.png'
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -61,7 +61,7 @@ let menuButton={
 //   // fontWeight:700,
 // }
 const Header = ({about,projects,contact}) => {
-  let nav = useNavigate()
+  // let nav = useNavigate()
   let [menuOpen,setMenuOpen]=useState(false)
   const size_theme = useTheme()
   const md_up = useMediaQuery(size_theme.breakpoints.up('md'));
@@ -105,7 +105,7 @@ const Header = ({about,projects,contact}) => {
            <Stack direction='row' sx={{flexDirection:'row',display:{xs:'none',lg:'flex'}}}>
               <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About Me</Button>
               <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>My Work</Button>
-              <Button sx={buttonStyle} onClick={()=>{nav('https://shankatech.hashnode.dev/')}}>Blog</Button>
+              {/* <Button sx={buttonStyle} onClick={()=>{nav('https://shankatech.hashnode.dev/')}}>Blog</Button> */}
               <Button sx={buttonStyle} onClick={()=>{scrol(contact)}}>Get in touch</Button>
             </Stack>
 
@@ -142,7 +142,7 @@ const Header = ({about,projects,contact}) => {
           >
           <Button  sx={{...menuHead}} onClick={()=>{scrol(about)}}>About Me</Button>
             <Button sx={{...menuHead}} onClick={()=>{ scrol(projects)}}>Work</Button>
-            <Button sx={{...menuHead}} onClick={()=>{ nav('https://shankatech.hashnode.dev/')}}>Blog</Button>
+            {/* <Button sx={{...menuHead}} onClick={()=>{ nav('https://shankatech.hashnode.dev/')}}>Blog</Button> */}
             <Button sx={{...menuHead}}  onClick={()=>{scrol(contact)}}>Get in Touch</Button>
             
           </Stack>
