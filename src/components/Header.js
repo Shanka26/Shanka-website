@@ -11,7 +11,7 @@ const buttonStyle = {
 
   
   color: 'primary.mid',
-  fontSize:{xs:13,sm:16,md:20,lg:24},
+  fontSize:{xs:13,sm:16,md:18,lg:20},
   height:{xs:'48px',md:'56px'},
   paddingX:{xs:1,sm:2,md:4},
   borderRadius:0,
