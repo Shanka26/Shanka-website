@@ -106,7 +106,7 @@ const Header = ({about,projects,contact}) => {
            <Stack direction='row' sx={{flexDirection:'row',display:{xs:'none',lg:'flex'}}}>
               <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About Me</Button>
               <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>My Work</Button>
-              {/* <Button sx={buttonStyle} onClick={()=>{nav('https://shankatech.hashnode.dev/')}}>Blog</Button> */}
+              <Button sx={buttonStyle} onClick={()=>{nav('https://shankatech.hashnode.dev/')}}>Blog</Button>
               <Button sx={buttonStyle} onClick={()=>{scrol(contact)}}>Get in touch</Button>
             </Stack>
 
@@ -143,7 +143,7 @@ const Header = ({about,projects,contact}) => {
           >
           <Button  sx={{...menuHead}} onClick={()=>{scrol(about)}}>About Me</Button>
             <Button sx={{...menuHead}} onClick={()=>{ scrol(projects)}}>Work</Button>
-            {/* <Button sx={{...menuHead}} onClick={()=>{ nav('https://shankatech.hashnode.dev/')}}>Blog</Button> */}
+            <Button sx={{...menuHead}} onClick={()=>{ nav('https://shankatech.hashnode.dev/')}}>Blog</Button>
             <Button sx={{...menuHead}}  onClick={()=>{scrol(contact)}}>Get in Touch</Button>
             
           </Stack>
