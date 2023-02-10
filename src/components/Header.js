@@ -62,7 +62,7 @@ let menuButton={
 // }
 const Header = ({about,projects,contact}) => {
   let navigate = useNavigate()
-  let history = useHistory()
+  // let history = useHistory()
   let [menuOpen,setMenuOpen]=useState(false)
   const size_theme = useTheme()
   const md_up = useMediaQuery(size_theme.breakpoints.up('md'));
