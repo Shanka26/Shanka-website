@@ -61,7 +61,7 @@ let menuButton={
 //   // fontWeight:700,
 // }
 const Header = ({about,projects,contact}) => {
-  let navigate = useNavigate()
+  let nav = useNavigate()
   // let history = useHistory()
   let [menuOpen,setMenuOpen]=useState(false)
   const size_theme = useTheme()
