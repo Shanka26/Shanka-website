@@ -61,7 +61,7 @@ let menuButton={
 //   // fontWeight:700,
 // }
 const Header = ({about,projects,contact}) => {
-  let nav = useNavigate()
+  // let nav = useNavigate()
   // let history = useHistory()
   let [menuOpen,setMenuOpen]=useState(false)
   const size_theme = useTheme()
@@ -106,7 +106,7 @@ const Header = ({about,projects,contact}) => {
            <Stack direction='row' sx={{flexDirection:'row',display:{xs:'none',lg:'flex'}}}>
               <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About Me</Button>
               <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>My Work</Button>
-              {/* <Button sx={buttonStyle} onClick={()=>{nav('https://shankatech.hashnode.dev/')}}>Blog</Button> */}
+              {/* <Button sx={buttonStyle} onClick={()=>{useNavigate('https://shankatech.hashnode.dev/')}}>Blog</Button> */}
               <Button sx={buttonStyle} onClick={()=>{scrol(contact)}}>Get in touch</Button>
             </Stack>
 
