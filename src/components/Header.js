@@ -103,7 +103,7 @@ const Header = ({about,projects,contact}) => {
 
            <Grid item container xs={9} justifyContent="flex-end" >
            <Stack direction='row' sx={{flexDirection:'row',display:{xs:'none',lg:'flex'}}}>
-              <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About Me</Button>
+              {/* <Button sx={buttonStyle}  onClick={()=>{scrollTo(about)}}>About Me</Button> */}
               <Button sx={buttonStyle} onClick={()=>{scrollTo(projects)}}>My Work</Button>
               
               <Button sx={buttonStyle} onClick={()=>{window.open('https://shankatech.hashnode.dev/','_blank')}}>Blog</Button>
@@ -141,7 +141,7 @@ const Header = ({about,projects,contact}) => {
           <Stack 
           // sx={{position: 'absolute',top:'10%'}}
           >
-          <Button  sx={{...menuHead}} onClick={()=>{scrol(about)}}>About Me</Button>
+          {/* <Button  sx={{...menuHead}} onClick={()=>{scrol(about)}}>About Me</Button> */}
             <Button sx={{...menuHead}} onClick={()=>{ scrol(projects)}}>Work</Button>
             <Button sx={{...menuHead}} onClick={()=>{ window.open('https://shankatech.hashnode.dev/','_blank')}}>Blog</Button>
             <Button sx={{...menuHead}}  onClick={()=>{scrol(contact)}}>Get in Touch</Button>
