@@ -8,7 +8,6 @@ import { ThemeProvider } from '@mui/system';
 
 
 
-
 const theme = createTheme({
 
   palette:{
@@ -66,7 +65,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
   <React.StrictMode>
-    <App />
+   
+      <App />
+    
   </React.StrictMode>
   </ThemeProvider>
 );

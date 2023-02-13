@@ -1,4 +1,5 @@
 import React, {useState,useEffect,useRef}  from 'react'
+
 import {Box, Button, Fab, Link, Grid, Stack, TextField, Typography} from '@mui/material'
 import Header from './components/Header'
 import RedditIcon from '@mui/icons-material/Reddit';
@@ -225,6 +226,7 @@ let aboutStyle= {
     
 
   return (
+    
     <Box ref={aboutRef} backgroundColor='secondary.dark' width='100vw' sx={{...scrollBar,display:'flex',flexDirection:'column',}}>
       
         <Header about={aboutRef} projects={projectsRef} contact={contactRef}/>
